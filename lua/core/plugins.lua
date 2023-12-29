@@ -15,24 +15,24 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
-	use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-	use {
-		'windwp/nvim-autopairs',
-		config = function () require('nvim-autopairs').setup {} end
-	}
-	use {
-		'kylechui/nvim-surround',
-		tag = '*',
-		config = function () require('nvim-surround').setup {} end
-	}
-	use {
-		'navarasu/onedark.nvim',
-		config = function () require('onedark').load() end
-	}
+  use {
+    'windwp/nvim-autopairs',
+    config = function () require('nvim-autopairs').setup {} end
+  }
+  use {
+    'kylechui/nvim-surround',
+    tag = '*',
+    config = function () require('nvim-surround').setup {} end
+  }
+  use {
+    'navarasu/onedark.nvim',
+    config = function () require('onedark').load() end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
