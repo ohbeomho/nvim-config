@@ -33,9 +33,22 @@ return require('packer').startup(function(use)
     config = function () require('nvim-surround').setup {} end
   }
   use {
-    'navarasu/onedark.nvim',
-    config = function () require('onedark').load() end
+    'olimorris/onedarkpro.nvim',
+    config = function () vim.cmd [[ colorscheme onedark ]] end
   }
+
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
