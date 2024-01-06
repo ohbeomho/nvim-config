@@ -33,8 +33,8 @@ return require('packer').startup(function(use)
     config = function () require('nvim-surround').setup {} end
   }
   use {
-    'olimorris/onedarkpro.nvim',
-    config = function () vim.cmd [[ colorscheme onedark ]] end
+    'Mofiqul/vscode.nvim',
+    config = function () require('vscode').load() end
   }
 
   use 'neovim/nvim-lspconfig'
