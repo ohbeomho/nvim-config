@@ -9,3 +9,4 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.cmd [[ language en_US ]]
+vim.cmd [[ autocmd BufEnter * silent! lcd %:p:h ]]

@@ -15,7 +15,14 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
     'nvim-tree/nvim-tree.lua',
-    config = function () require('nvim-tree').setup() end
+    config = function ()
+      require('nvim-tree').setup({
+        update_focused_file = {
+          enable = true,
+          update_cwd = true
+        }
+      })
+    end
   }
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-treesitter/nvim-treesitter'
