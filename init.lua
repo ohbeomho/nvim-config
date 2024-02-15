@@ -9,3 +9,4 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.cmd [[ language en_US ]]
+vim.cmd [[ set guicursor=n-v-c-i:block-Cursor ]]
