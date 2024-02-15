@@ -10,4 +10,3 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.cmd [[ language en_US ]]
 vim.cmd [[ autocmd BufEnter * silent! lcd %:p:h ]]
-vim.cmd [[ set guicursor=n-v-c-i:block-Cursor ]]
