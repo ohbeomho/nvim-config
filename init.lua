@@ -1,5 +1,6 @@
 require('core.mappings')
 require('core.plugin_config')
+require('core.snippets')
 
 vim.opt.number = true
 vim.opt.shiftwidth = 2
