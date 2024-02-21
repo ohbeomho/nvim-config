@@ -68,6 +68,11 @@ return require('packer').startup(function(use)
   use 'MunifTanjim/prettier.nvim'
 
   use {
+    'andweeb/presence.nvim',
+    config = function () require('presence').setup() end
+  }
+
+  use {
     'nvim-lualine/lualine.nvim',
     config = function () require('lualine').setup() end
   }
