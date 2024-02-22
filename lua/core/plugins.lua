@@ -13,31 +13,19 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'nvim-tree/nvim-tree.lua',
-    config = function ()
-      require('nvim-tree').setup({
-        update_focused_file = {
-          enable = true,
-          update_cwd = true
-        },
-        git = {
-          enable = true,
-          ignore = false,
-          timeout = 500
-        },
-        filters = {
-          dotfiles = false
-        }
-      })
-    end
-  }
+
+  -- Tree view
+  use 'nvim-tree/nvim-tree.lua'
+  -- Icons
   use 'nvim-tree/nvim-web-devicons'
+  -- Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter'
+  -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- (){}
   use {
     'windwp/nvim-autopairs',
     config = function () require('nvim-autopairs').setup {} end
@@ -47,36 +35,35 @@ return require('packer').startup(function(use)
     tag = '*',
     config = function () require('nvim-surround').setup {} end
   }
+  -- Theme
   use {
-    'Mofiqul/vscode.nvim',
-    config = function () require('vscode').load() end
+    'folke/tokyonight.nvim',
+    config = function () vim.cmd([[ colorscheme tokyonight-storm ]]) end
   }
-
+  -- nvim-cmp
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
-
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-
   use 'rafamadriz/friendly-snippets'
-
+  -- Prettier
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
-
+  -- Discord presence
   use {
     'andweeb/presence.nvim',
     config = function () require('presence').setup() end
   }
-
+  -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
     config = function () require('lualine').setup() end
   }
-
+  -- Coding time tracker
   use 'wakatime/vim-wakatime'
 
   -- Automatically set up your configuration after cloning packer.nvim
