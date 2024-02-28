@@ -37,8 +37,8 @@ return require('packer').startup(function(use)
   }
   -- Theme
   use {
-    'folke/tokyonight.nvim',
-    config = function () vim.cmd([[ colorscheme tokyonight-storm ]]) end
+    'joshdick/onedark.vim',
+    config = function () vim.cmd([[ colorscheme onedark ]]) end
   }
   -- nvim-cmp
   use 'neovim/nvim-lspconfig'
@@ -65,6 +65,11 @@ return require('packer').startup(function(use)
   }
   -- Coding time tracker
   use 'wakatime/vim-wakatime'
+  -- CSS color highlighting
+  use {
+    'brenoprata10/nvim-highlight-colors',
+    config = function () require('nvim-highlight-colors').setup {} end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
