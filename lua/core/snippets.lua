@@ -1,25 +1,25 @@
-local ls = require('luasnip')
+local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 
-ls.add_snippets('javascript', {
+ls.add_snippets("javascript", {
   s({
-    trig = 'clg',
-    namr = 'ConsoleLog',
-    dscr = 'Log message to console'
+    trig = "clg",
+    namr = "ConsoleLog",
+    dscr = "Log message to console",
   }, {
-    t('console.log('),
+    t("console.log("),
     i(0),
-    t(')')
+    t(")"),
   }),
   s({
-    trig = 'cle',
-    namr = 'ConsoleError',
-    dscr = 'Log error message to console'
+    trig = "cle",
+    namr = "ConsoleError",
+    dscr = "Log error message to console",
   }, {
-    t('console.error('),
+    t("console.error("),
     i(0),
-    t(')')
-  })
+    t(")"),
+  }),
 })
