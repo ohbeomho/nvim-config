@@ -18,7 +18,7 @@ local function format()
     return
   end
 
-  vim.buf.lsp.format()
+  vim.lsp.buf.format()
 end
 
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<cr>")
