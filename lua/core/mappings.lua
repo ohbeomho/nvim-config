@@ -3,7 +3,8 @@ local stylua = require("stylua-nvim")
 vim.g.mapleader = " "
 
 local function format()
-  local prettierFiles = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "markdown" }
+  local prettierFiles =
+    { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "markdown", "json" }
   local filetype = vim.bo.filetype
 
   for _, file in ipairs(prettierFiles) do
