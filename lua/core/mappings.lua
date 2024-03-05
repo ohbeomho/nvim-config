@@ -23,7 +23,7 @@ local function format()
 end
 
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<cr>")
-vim.keymap.set("n", "<c-n>", "<cmd>NvimTreeToggle<cr>")
+vim.keymap.set("n", "<c-b>", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>f", format)
 vim.keymap.set("n", "<leader>k", function()

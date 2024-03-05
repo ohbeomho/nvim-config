@@ -48,9 +48,10 @@ return require("packer").startup(function(use)
 
   -- Theme
   use({
-    "joshdick/onedark.vim",
+    "ellisonleao/gruvbox.nvim",
     config = function()
-      vim.cmd([[ colorscheme onedark ]])
+      vim.o.background = "dark"
+      vim.cmd([[ colorscheme gruvbox ]])
     end,
   })
 
