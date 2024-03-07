@@ -47,13 +47,7 @@ return require("packer").startup(function(use)
   })
 
   -- Theme
-  use({
-    "ellisonleao/gruvbox.nvim",
-    config = function()
-      vim.o.background = "dark"
-      vim.cmd([[ colorscheme gruvbox ]])
-    end,
-  })
+  use("ellisonleao/gruvbox.nvim")
 
   -- nvim-cmp
   use("neovim/nvim-lspconfig")
