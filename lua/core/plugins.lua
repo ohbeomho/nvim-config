@@ -42,7 +42,13 @@ return require("packer").startup(function(use)
   })
 
   -- Theme
-  use("ellisonleao/gruvbox.nvim")
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      vim.cmd([[ colorscheme catppuccin-frappe ]])
+    end,
+  })
 
   -- Auto completion
   use("neovim/nvim-lspconfig")
@@ -111,6 +117,15 @@ return require("packer").startup(function(use)
 
   -- Multi cursor
   use("mg979/vim-visual-multi")
+
+  -- Cool UI
+  use({
+    "folke/noice.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
