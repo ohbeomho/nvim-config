@@ -23,20 +23,15 @@ return require("packer").startup(function(use)
   -- Syntax highlighting
   use("nvim-treesitter/nvim-treesitter")
 
-  -- Fuzzy finder
+  -- File finder
   use({
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
     requires = { { "nvim-lua/plenary.nvim" } },
   })
 
-  -- (){}
-  use({
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup({})
-    end,
-  })
+  -- Auto pairs
+  use("cohama/lexima.vim")
 
   use({
     "kylechui/nvim-surround",
@@ -49,13 +44,15 @@ return require("packer").startup(function(use)
   -- Theme
   use("ellisonleao/gruvbox.nvim")
 
-  -- nvim-cmp
+  -- Auto completion
   use("neovim/nvim-lspconfig")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
   use("hrsh7th/cmp-cmdline")
   use("hrsh7th/nvim-cmp")
+
+  -- Snippets
   use("L3MON4D3/LuaSnip")
   use("saadparwaiz1/cmp_luasnip")
   use("rafamadriz/friendly-snippets")
