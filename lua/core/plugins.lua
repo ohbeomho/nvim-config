@@ -89,6 +89,14 @@ return require("packer").startup(function(use)
     end,
   })
 
+  -- Indention guide
+  use({
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("ibl").setup()
+    end,
+  })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
