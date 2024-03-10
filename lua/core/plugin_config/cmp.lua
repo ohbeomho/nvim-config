@@ -40,6 +40,30 @@ cmp.setup({
   }),
 })
 
+cmp.setup.filetype("gitcommit", {
+  sources = cmp.config.sources({
+    { name = "git" },
+  }, {
+    { name = "buffer" },
+  }),
+})
+
+cmp.setup.cmdline({ "/", "?" }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = "buffer" },
+  },
+})
+
+cmp.setup.cmdline(":", {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = "path" },
+  }, {
+    { name = "cmdline" },
+  }),
+})
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
 
