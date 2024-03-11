@@ -11,6 +11,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
 vim.cmd("language en_US")
+
 vim.api.nvim_create_autocmd("BufEnter", {
   command = "silent! lcd %:p:h",
 })
