@@ -10,9 +10,17 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
-vim.cmd([[ language en_US ]])
-vim.cmd([[ autocmd BufEnter * silent! lcd %:p:h ]])
-vim.cmd([[ autocmd BufNewFile,BufRead *.ejs set filetype=html ]])
+vim.cmd("language en_US")
+vim.api.nvim_create_autocmd("BufEnter", {
+  command = "silent! lcd %:p:h",
+})
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.ejs",
+  command = "set filetype=html",
+})
+vim.api.nvim_create_autocmd("WinNew", {
+  command = "wincmd L",
+})
 
 vim.o.guifont = "CaskaydiaMono Nerd Font Mono:h13"
 
