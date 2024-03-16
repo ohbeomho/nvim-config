@@ -10,19 +10,22 @@ local function format()
   for _, file in ipairs(prettierFiles) do
     if file == filetype then
       vim.cmd([[ Prettier ]])
+      print("Formatted - prettier")
       return
     end
   end
 
   if filetype == "lua" then
     stylua.format_file()
+    print("Formatted - stylua")
     return
   end
 
   vim.lsp.buf.format()
+  print("Formatted")
 end
 
-vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<cr>")
+vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
 vim.keymap.set("n", "<c-b>", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>f", format)
