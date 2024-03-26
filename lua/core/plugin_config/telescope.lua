@@ -8,11 +8,11 @@ wk.register({
       builtin.find_files,
       "Find file",
     },
-    b = {
+    g = {
       builtin.live_grep,
       "Live grep",
     },
-    g = {
+    b = {
       builtin.buffers,
       "Buffers",
     },
