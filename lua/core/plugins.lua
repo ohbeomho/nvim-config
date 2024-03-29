@@ -23,7 +23,7 @@ return require("packer").startup(function(use)
   -- Syntax highlighting
   use("nvim-treesitter/nvim-treesitter")
 
-  -- File finder
+  -- Fuzzy finder
   use({
     "nvim-telescope/telescope.nvim",
     tag = "0.1.5",
@@ -103,21 +103,8 @@ return require("packer").startup(function(use)
     end,
   })
 
-  -- Start page
-  use({
-    "goolord/alpha-nvim",
-    requires = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("alpha").setup(require("alpha.themes.startify").config)
-    end,
-  })
-
   -- Git
-  use("airblade/vim-gitgutter")
   use("tpope/vim-fugitive")
-
-  -- Multi cursor
-  use("mg979/vim-visual-multi")
 
   -- Comment highlighting
   use({
@@ -125,16 +112,6 @@ return require("packer").startup(function(use)
     requires = { { "nvim-lua/plenary.nvim" } },
     config = function()
       require("todo-comments").setup()
-    end,
-  })
-
-  -- Keybinding suggestions
-  use({
-    "folke/which-key.nvim",
-    config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-      require("which-key").setup({})
     end,
   })
 
