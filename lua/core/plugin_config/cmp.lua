@@ -10,8 +10,7 @@ cmp.setup({
   mapping = {
     ["<tab>"] = cmp.mapping.confirm({ select = true }),
     ["<c-e>"] = cmp.mapping.abort(),
-    ["<c-space>"] = cmp.mapping.complete(),
-    ["<tab>"] = cmp.mapping(function(fallback)
+    ["<c-j>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
@@ -22,7 +21,7 @@ cmp.setup({
         fallback()
       end
     end, { "i", "s" }),
-    ["<s-tab>"] = cmp.mapping(function(fallback)
+    ["<c-k>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.jumpable(-1) then
