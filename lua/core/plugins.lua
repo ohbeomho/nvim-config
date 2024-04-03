@@ -70,20 +70,27 @@ return require("packer").startup(function(use)
   })
   use("tpope/vim-fugitive")
   use({
-    "lukas-reineke/indent-blankline.nvim",
+    "shellRaining/hlchunk.nvim",
     config = function()
-      require("ibl").setup()
+      require("hlchunk").setup({
+        blank = {
+          enable = false
+        },
+        indent = {
+          fg = "#505050"
+        }
+      })
     end,
   })
   use({
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup({
-        "*";
+        "*",
         css = {
           css = true,
-          RRGGBBAA = true
-        }
+          RRGGBBAA = true,
+        },
       })
     end,
   })
