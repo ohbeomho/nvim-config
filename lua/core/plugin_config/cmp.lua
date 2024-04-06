@@ -9,6 +9,7 @@ cmp.setup({
   },
   mapping = {
     ["<tab>"] = cmp.mapping.confirm({ select = true }),
+    ["<c-space>"] = cmp.mapping.complete(),
     ["<c-e>"] = cmp.mapping.abort(),
     ["<c-j>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -36,7 +37,7 @@ cmp.setup({
     { name = "luasnip" },
   }, {
     { name = "buffer" },
-  }),
+  })
 })
 
 cmp.setup.filetype("gitcommit", {
