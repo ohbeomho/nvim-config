@@ -74,24 +74,18 @@ return require("packer").startup(function(use)
     config = function()
       require("hlchunk").setup({
         blank = {
-          enable = false
+          enable = false,
         },
         indent = {
-          fg = "#505050"
-        }
+          fg = "#505050",
+        },
       })
     end,
   })
   use({
-    "norcalli/nvim-colorizer.lua",
+    "brenoprata10/nvim-highlight-colors",
     config = function()
-      require("colorizer").setup({
-        "*",
-        css = {
-          css = true,
-          RRGGBBAA = true,
-        },
-      })
+      require("nvim-highlight-colors").setup()
     end,
   })
 

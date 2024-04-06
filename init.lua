@@ -2,7 +2,7 @@ require("core.mappings")
 require("core.plugin_config")
 require("core.snippets")
 
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
 vim.opt.number = true
 vim.opt.shiftwidth = 2
