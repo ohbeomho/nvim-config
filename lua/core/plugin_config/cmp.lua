@@ -32,20 +32,19 @@ cmp.setup({
       end
     end, { "i", "s" }),
   },
-  sources = cmp.config.sources({
+  sources = {
+    { name = "nvim_lsp_signature_help" },
     { name = "nvim_lsp" },
     { name = "luasnip" },
-  }, {
     { name = "buffer" },
-  })
+  },
 })
 
 cmp.setup.filetype("gitcommit", {
-  sources = cmp.config.sources({
+  sources = {
     { name = "git" },
-  }, {
     { name = "buffer" },
-  }),
+  },
 })
 
 cmp.setup.cmdline({ "/", "?" }, {
@@ -57,11 +56,10 @@ cmp.setup.cmdline({ "/", "?" }, {
 
 cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline(),
-  sources = cmp.config.sources({
+  sources = {
     { name = "path" },
-  }, {
     { name = "cmdline" },
-  }),
+  },
 })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
