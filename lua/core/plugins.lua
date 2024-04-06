@@ -76,9 +76,6 @@ return require("packer").startup(function(use)
         blank = {
           enable = false,
         },
-        indent = {
-          fg = "#505050",
-        },
       })
     end,
   })
