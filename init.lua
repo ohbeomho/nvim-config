@@ -25,10 +25,8 @@ vim.api.nvim_create_autocmd("WinNew", {
   command = "wincmd L",
 })
 
-vim.o.guifont = "JetBrainsMono Nerd Font:h13"
+vim.o.guifont = "JetBrainsMono Nerd Font Mono:h13"
 vim.g.neovide_padding_top = 12
-vim.g.neovide_padding_left = 12
-vim.g.neovide_padding_right = 12
 
 -- Array of file names indicating root directory. Modify to your liking.
 local root_names = { ".git", "src" }
