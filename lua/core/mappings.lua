@@ -39,3 +39,5 @@ vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
 vim.keymap.set("n", "<tab>x", "<cmd>tabc<cr>")
 
 vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
+
+vim.keymap.set("t", "<esc>", "<c-\\><c-n>");

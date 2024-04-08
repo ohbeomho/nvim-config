@@ -71,11 +71,11 @@ return require("packer").startup(function(use)
   })
   use("tpope/vim-fugitive")
   use({
-    "shellRaining/hlchunk.nvim",
+    "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require("hlchunk").setup({
-        blank = {
-          enable = false,
+      require("ibl").setup({
+        indent = {
+          char = "│",
         },
       })
     end,
@@ -84,6 +84,19 @@ return require("packer").startup(function(use)
     "brenoprata10/nvim-highlight-colors",
     config = function()
       require("nvim-highlight-colors").setup()
+    end,
+  })
+  use({
+    "akinsho/toggleterm.nvim",
+    tag = "*",
+    config = function()
+      require("toggleterm").setup({
+        direction = "float",
+        float_opts = {
+          title_pos = "left",
+        },
+        shell = "pwsh",
+      })
     end,
   })
 
