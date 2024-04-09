@@ -33,7 +33,7 @@ return require("packer").startup(function(use)
     "catppuccin/nvim",
     as = "catppuccin",
     config = function()
-      vim.cmd([[ colorscheme catppuccin-latte ]])
+      vim.cmd([[ colorscheme catppuccin-macchiato ]])
     end,
   })
   use("neovim/nvim-lspconfig")
