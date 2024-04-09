@@ -30,9 +30,11 @@ vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFocus<cr>")
 
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
-
 vim.keymap.set("n", "<leader>F", format)
+
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
+
+vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>");
 
 vim.keymap.set("n", "<tab>n", "<cmd>tabn<cr>")
 vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
