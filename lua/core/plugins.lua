@@ -99,6 +99,13 @@ return require("packer").startup(function(use)
       })
     end,
   })
+  use({
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  })
+  use("folke/neodev.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
