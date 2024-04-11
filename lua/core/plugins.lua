@@ -21,7 +21,11 @@ return require("packer").startup(function(use)
     tag = "0.1.5",
     requires = { { "nvim-lua/plenary.nvim" } },
   })
+
+  -- Auto pairs
   use("cohama/lexima.vim")
+
+  -- Editing surroundings
   use({
     "kylechui/nvim-surround",
     tag = "*",
@@ -29,6 +33,8 @@ return require("packer").startup(function(use)
       require("nvim-surround").setup({})
     end,
   })
+
+  -- Theme
   use({
     "catppuccin/nvim",
     as = "catppuccin",
@@ -36,6 +42,8 @@ return require("packer").startup(function(use)
       vim.cmd([[ colorscheme catppuccin-macchiato ]])
     end,
   })
+
+  -- Completions
   use("neovim/nvim-lspconfig")
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
@@ -46,22 +54,32 @@ return require("packer").startup(function(use)
   use("L3MON4D3/LuaSnip")
   use("saadparwaiz1/cmp_luasnip")
   use("rafamadriz/friendly-snippets")
+
+  -- Formatting
   use("jose-elias-alvarez/null-ls.nvim")
   use("MunifTanjim/prettier.nvim")
   use("ckipp01/stylua-nvim")
+
+  -- Discord presence
   use({
     "andweeb/presence.nvim",
     config = function()
-      require("presence").setup()
+      require("presence").setup({})
     end,
   })
+
+  -- Statusline
   use({
     "nvim-lualine/lualine.nvim",
     config = function()
-      require("lualine").setup()
+      require("lualine").setup({})
     end,
   })
+
+  -- Coding time tracker
   use("wakatime/vim-wakatime")
+
+  -- Start screen
   use({
     "goolord/alpha-nvim",
     requires = { "nvim-tree/nvim-web-devicons" },
@@ -69,7 +87,8 @@ return require("packer").startup(function(use)
       require("alpha").setup(require("alpha.themes.startify").config)
     end,
   })
-  use("tpope/vim-fugitive")
+
+  -- Indentation guide
   use({
     "lukas-reineke/indent-blankline.nvim",
     config = function()
@@ -80,12 +99,16 @@ return require("packer").startup(function(use)
       })
     end,
   })
+
+  -- Highlighting colors
   use({
     "brenoprata10/nvim-highlight-colors",
     config = function()
       require("nvim-highlight-colors").setup()
     end,
   })
+
+  -- Terminal
   use({
     "akinsho/toggleterm.nvim",
     tag = "*",
@@ -99,19 +122,26 @@ return require("packer").startup(function(use)
       })
     end,
   })
+
+  -- Commenting
   use({
     "numToStr/Comment.nvim",
     config = function()
       require("Comment").setup()
     end,
   })
+
+  -- Neovim config signatures
   use("folke/neodev.nvim")
+
+  -- Git
   use({
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup()
     end,
   })
+  use("tpope/vim-fugitive")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
