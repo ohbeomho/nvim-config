@@ -23,14 +23,19 @@ return require("packer").startup(function(use)
   })
 
   -- Auto pairs
-  use("cohama/lexima.vim")
-
+  use({
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end,
+  })
   -- Editing surroundings
   use({
     "kylechui/nvim-surround",
     tag = "*",
     config = function()
-      require("nvim-surround").setup({})
+      require("nvim-surround").setup()
     end,
   })
 

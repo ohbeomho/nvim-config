@@ -1,5 +1,7 @@
+-- for nvim lua config files
 require("neodev").setup({})
 
+-- cmp setup
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 
@@ -64,6 +66,11 @@ cmp.setup.cmdline(":", {
   },
 })
 
+-- Insert '(' after function/method
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+-- Language servers
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require("lspconfig")
 
