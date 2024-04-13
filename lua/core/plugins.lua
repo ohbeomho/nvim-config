@@ -32,7 +32,8 @@ return require("packer").startup(function(use)
       })
     end,
   })
-  -- Editing surroundings
+
+  -- Edit surroundings
   use({
     "kylechui/nvim-surround",
     tag = "*",
@@ -107,7 +108,7 @@ return require("packer").startup(function(use)
     end,
   })
 
-  -- Highlighting colors
+  -- Highlight colors
   use({
     "brenoprata10/nvim-highlight-colors",
     config = function()
