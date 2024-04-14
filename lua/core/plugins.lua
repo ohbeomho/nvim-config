@@ -149,6 +149,12 @@ return require("packer").startup(function(use)
   })
   use("tpope/vim-fugitive")
 
+  -- Automatically creates parent dir
+  use("mateuszwieloch/automkdir.nvim")
+
+  -- Highlight todo comments
+  use("folke/todo-comments.nvim")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
