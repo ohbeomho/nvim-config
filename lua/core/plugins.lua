@@ -24,12 +24,10 @@ return require("packer").startup(function(use)
 
   -- Auto pairs
   use({
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
+    "altermo/ultimate-autopair.nvim",
+    event = { "InsertEnter", "CmdlineEnter" },
     config = function()
-      require("nvim-autopairs").setup({
-        check_ts = true,
-      })
+      require("ultimate-autopair").setup({})
     end,
   })
 
