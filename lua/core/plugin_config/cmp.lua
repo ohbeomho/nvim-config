@@ -1,6 +1,3 @@
--- for nvim lua config files
-require("neodev").setup({})
-
 -- cmp setup
 local cmp = require("cmp")
 local luasnip = require("luasnip")

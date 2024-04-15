@@ -1,3 +1,4 @@
+require("core.plugins")
 require("core.mappings")
 require("core.plugin_config")
 require("core.snippets")
@@ -12,7 +13,9 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
+
 vim.cmd("language en_US")
+vim.cmd("colorscheme catppuccin-macchiato");
 
 vim.api.nvim_create_autocmd("BufEnter", {
   command = "silent! lcd %:p:h",
@@ -28,21 +31,17 @@ vim.api.nvim_create_autocmd("WinNew", {
 vim.o.guifont = "JetBrainsMono Nerd Font Mono:h13"
 vim.g.neovide_padding_top = 12
 
--- Array of file names indicating root directory. Modify to your liking.
+-- Set root dir
 local root_names = { ".git", "src" }
-
--- Cache to use for speed up (at cost of possibly outdated results)
 local root_cache = {}
 
 local set_root = function()
-  -- Get directory path to start search from
   local path = vim.api.nvim_buf_get_name(0)
   if path == "" then
     return
   end
   path = vim.fs.dirname(path)
 
-  -- Try cache and resort to searching upward for root directory
   local root = root_cache[path]
   if root == nil then
     local root_file = vim.fs.find(root_names, { path = path, upward = true })[1]
@@ -53,7 +52,6 @@ local set_root = function()
     root_cache[path] = root
   end
 
-  -- Set current directory
   vim.fn.chdir(root)
 end
 

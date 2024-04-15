@@ -1,4 +1,5 @@
 local stylua = require("stylua-nvim")
+local builtin = require("telescope.builtin")
 
 vim.g.mapleader = " "
 
@@ -42,6 +43,11 @@ vim.keymap.set("t", "<esc>", "<c-\\><c-n>")
 vim.keymap.set("n", "<tab>n", "<cmd>tabn<cr>")
 vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
 vim.keymap.set("n", "<tab>x", "<cmd>tabc<cr>")
+
+-- Telescope
+vim.keymap.set("n", "<leader>ff", builtin.find_files)
+vim.keymap.set("n", "<leader>fg", builtin.live_grep)
+vim.keymap.set("n", "<leader>fb", builtin.buffers)
 
 vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
