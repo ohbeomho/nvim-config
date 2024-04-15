@@ -1,9 +1,12 @@
 return {
   { "williamboman/mason.nvim", lazy = false },
   "williamboman/mason-lspconfig.nvim",
+  { "folke/neodev.nvim", opts = {} },
   {
     "neovim/nvim-lspconfig",
     config = function()
+      require("neodev").setup({})
+
       require("mason").setup()
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "clangd", "tsserver", "emmet_ls" },
@@ -26,5 +29,4 @@ return {
       lspconfig.emmet_ls.setup({ capabilities = capabilities })
     end,
   },
-  { "folke/neodev.nvim", opts = {} },
 }
