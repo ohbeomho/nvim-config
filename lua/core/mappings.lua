@@ -1,30 +1,4 @@
-local stylua = require("stylua-nvim")
 local builtin = require("telescope.builtin")
-
-vim.g.mapleader = " "
-
-local function format()
-  local prettierFiles =
-    { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact", "markdown", "json" }
-  local filetype = vim.bo.filetype
-
-  for _, file in ipairs(prettierFiles) do
-    if file == filetype then
-      vim.cmd([[ Prettier ]])
-      print("Formatted - prettier")
-      return
-    end
-  end
-
-  if filetype == "lua" then
-    stylua.format_file()
-    print("Formatted - stylua")
-    return
-  end
-
-  vim.lsp.buf.format()
-  print("Formatted")
-end
 
 -- Tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
@@ -33,7 +7,6 @@ vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFocus<cr>")
 -- LSP
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
-vim.keymap.set("n", "<leader>F", format)
 
 -- Terminal
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
