@@ -1,7 +1,9 @@
-require("core.plugins")
+require("core.plugin")
 require("core.mappings")
-require("core.plugin_config")
 require("core.snippets")
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
@@ -15,7 +17,7 @@ vim.opt.smartindent = true
 vim.opt.ignorecase = true
 
 vim.cmd("language en_US")
-vim.cmd("colorscheme catppuccin-macchiato");
+vim.cmd("colorscheme catppuccin-macchiato")
 
 vim.api.nvim_create_autocmd("BufEnter", {
   command = "silent! lcd %:p:h",
