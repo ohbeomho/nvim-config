@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 require("core.plugin")
 require("core.mappings")
 require("core.snippets")
