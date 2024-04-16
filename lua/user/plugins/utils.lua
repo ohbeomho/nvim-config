@@ -60,8 +60,14 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  { "wakatime/vim-wakatime", lazy = false },
+  { "wakatime/vim-wakatime",   lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
   { "akinsho/toggleterm.nvim", version = "*", config = true },
+  {
+    "Wansmer/treesj",
+    keys = { "<space>m", "<space>j", "<space>s" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+  },
 }
