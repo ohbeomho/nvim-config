@@ -33,8 +33,7 @@ vim.api.nvim_create_autocmd("WinNew", {
 })
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h13"
-  vim.g.neovide_padding_top = 12
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono,D2Coding:h13"
 end
 
 -- Set root dir
