@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-require("core.plugin")
+require("core.lazy")
 require("core.mappings")
 require("core.snippets")
 
@@ -21,16 +21,10 @@ vim.opt.ignorecase = true
 vim.cmd("language en_US")
 vim.cmd("colorscheme catppuccin-macchiato")
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  command = "silent! lcd %:p:h",
-})
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "*.ejs",
-  command = "set filetype=html",
-})
-vim.api.nvim_create_autocmd("WinNew", {
-  command = "wincmd L",
-})
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+
+autocmd("WinNew", { command = "wincmd L" })
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font Mono,D2Coding:h13"
@@ -60,5 +54,5 @@ local set_root = function()
   vim.fn.chdir(root)
 end
 
-local root_augroup = vim.api.nvim_create_augroup("MyAutoRoot", {})
-vim.api.nvim_create_autocmd("BufEnter", { group = root_augroup, callback = set_root })
+local root_augroup = augroup("MyAutoRoot", {})
+autocmd("BufEnter", { group = root_augroup, callback = set_root })
