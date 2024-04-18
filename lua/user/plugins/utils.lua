@@ -24,6 +24,7 @@ return {
   "mateuszwieloch/automkdir.nvim",
   {
     "numToStr/Comment.nvim",
+    opts = {},
     lazy = false,
   },
   {
@@ -60,10 +61,20 @@ return {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  { "wakatime/vim-wakatime",   lazy = false },
+  { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
-  { "akinsho/toggleterm.nvim", version = "*", config = true },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    opts = {
+      shell = "pwsh",
+      direction = "float",
+      float_opts = {
+        title_pos = "left",
+      },
+    },
+  },
   {
     "Wansmer/treesj",
     keys = { "<space>m", "<space>j", "<space>s" },
