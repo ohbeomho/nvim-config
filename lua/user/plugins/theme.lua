@@ -1,14 +1,6 @@
 return {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    opts = {
-      scope = {
-        show_exact_scope = true,
-      },
-    },
-  },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   {
     "goolord/alpha-nvim",
