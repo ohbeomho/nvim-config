@@ -60,7 +60,11 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
   },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
