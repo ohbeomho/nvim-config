@@ -25,6 +25,12 @@ local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
 autocmd("WinNew", { command = "wincmd L" })
+autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.ejs",
+  callback = function()
+    vim.bo.filetype = "html"
+  end,
+})
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font Mono,D2Coding:h13"
