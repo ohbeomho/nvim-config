@@ -24,13 +24,13 @@ return {
   "mateuszwieloch/automkdir.nvim",
   {
     "numToStr/Comment.nvim",
-    opts = {},
+    config = true,
     lazy = false,
   },
   {
     "altermo/ultimate-autopair.nvim",
     event = { "InsertEnter", "CmdlineEnter" },
-    opts = {},
+    config = true,
   },
   {
     "kylechui/nvim-surround",
@@ -84,6 +84,6 @@ return {
     "Wansmer/treesj",
     keys = { "<space>m", "<space>j", "<space>s" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    opts = {},
+    config = true,
   },
 }

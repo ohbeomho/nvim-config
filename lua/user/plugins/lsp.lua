@@ -1,7 +1,7 @@
 return {
   { "williamboman/mason.nvim", lazy = false },
   "williamboman/mason-lspconfig.nvim",
-  { "folke/neodev.nvim", opts = {} },
+  { "folke/neodev.nvim", config = true },
   {
     "neovim/nvim-lspconfig",
     config = function()
