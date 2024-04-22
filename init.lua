@@ -9,6 +9,8 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
+vim.opt.guicursor = "n-v-c:block,i:hor20"
+
 vim.opt.number = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
