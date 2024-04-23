@@ -66,7 +66,7 @@ return {
     end,
   },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-  { "wakatime/vim-wakatime", lazy = false },
+  { "wakatime/vim-wakatime",                    lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
   {
@@ -86,4 +86,9 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = true,
   },
+  {
+    "yorickpeterse/nvim-tree-pairs",
+    config = true,
+  },
+  { "preservim/tagbar" },
 }

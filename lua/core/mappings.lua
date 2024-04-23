@@ -22,5 +22,8 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files)
 vim.keymap.set("n", "<leader>fg", builtin.live_grep)
 vim.keymap.set("n", "<leader>fb", builtin.buffers)
 
+-- Tagbar
+vim.keymap.set("n", "<leader>g", "<cmd>TagbarToggle<cr>")
+
 vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
