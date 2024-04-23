@@ -41,23 +41,6 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.install").compilers = { "clang" }
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c", "lua", "javascript", "typescript", "html", "css", "vimdoc" },
-        sync_install = true,
-        auto_install = true,
-        highlight = {
-          enable = true,
-        },
-        ignore_install = {},
-        modules = {},
-      })
-    end,
-  },
-  {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
@@ -66,7 +49,7 @@ return {
     end,
   },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-  { "wakatime/vim-wakatime",                    lazy = false },
+  { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
   {
@@ -79,16 +62,6 @@ return {
         title_pos = "left",
       },
     },
-  },
-  {
-    "Wansmer/treesj",
-    keys = { "<space>m", "<space>j", "<space>s" },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    config = true,
-  },
-  {
-    "yorickpeterse/nvim-tree-pairs",
-    config = true,
   },
   { "preservim/tagbar" },
 }
