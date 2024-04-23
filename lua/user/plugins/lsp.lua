@@ -1,7 +1,7 @@
 return {
   { "williamboman/mason.nvim", lazy = false },
   "williamboman/mason-lspconfig.nvim",
-  { "folke/neodev.nvim", config = true },
+  { "folke/neodev.nvim",       config = true },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -24,7 +24,13 @@ return {
           },
         },
       })
-      lspconfig.clangd.setup({ capabilities = capabilities })
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+        cmd = {
+          "clangd",
+          "--offset-encoding=utf-16",
+        },
+      })
       lspconfig.tsserver.setup({ capabilities = capabilities })
       lspconfig.emmet_ls.setup({ capabilities = capabilities })
     end,
