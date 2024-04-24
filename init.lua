@@ -34,6 +34,10 @@ autocmd({ "BufNewFile", "BufRead" }, {
   end,
 })
 
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono,D2Coding:h13"
+end
+
 -- Set root dir
 local root_names = { ".git", "src" }
 local root_cache = {}
