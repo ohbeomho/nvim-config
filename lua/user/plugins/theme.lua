@@ -3,7 +3,11 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    config = true,
+    opts = {
+      scope = {
+        show_start = false,
+      },
+    },
   },
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   {
