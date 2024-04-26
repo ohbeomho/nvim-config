@@ -35,7 +35,7 @@ autocmd({ "BufNewFile", "BufRead" }, {
 })
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono,D2Coding:h13"
+  vim.o.guifont = "JetBrainsMonoNL NFM:h13"
 end
 
 -- Set root dir
