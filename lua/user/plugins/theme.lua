@@ -32,4 +32,18 @@ return {
       require("alpha").setup(require("user.themes.theta-edit").config)
     end,
   },
+  {
+    "yamatsum/nvim-cursorline",
+    opts = {
+      cursorline = {
+        enable = true,
+        timeout = 1000,
+      },
+      cursorword = {
+        enable = true,
+        min_length = 3,
+        hl = { underline = true },
+      },
+    },
+  },
 }
