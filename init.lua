@@ -19,6 +19,7 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
+vim.opt.linespace = -1
 
 vim.cmd("language en_US")
 vim.cmd("colorscheme catppuccin-macchiato")
@@ -39,6 +40,7 @@ if vim.g.neovide then
 end
 
 -- Set root dir
+-- From https://www.reddit.com/r/neovim/comments/zy5s0l/you_dont_need_vimrooter_usually_or_how_to_set_up/
 local root_names = { ".git", "src" }
 local root_cache = {}
 
