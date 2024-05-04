@@ -1,5 +1,5 @@
 return {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",          name = "catppuccin",                       priority = 1000 },
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   {
     "nvim-lualine/lualine.nvim",
@@ -21,5 +21,23 @@ return {
     config = function()
       require("alpha").setup(require("user.themes.theta-edit").config)
     end,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {
+      scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+        include = {
+          node_type = {
+            lua = { "table_constructor" },
+            javascript = { "object" },
+            cpp = { "initializer_list" },
+          },
+        },
+      },
+    },
   },
 }
