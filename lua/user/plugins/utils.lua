@@ -41,13 +41,11 @@ return {
     end,
   },
   {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("telescope").setup({})
-      require("telescope").load_extension("fzf")
-    end,
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
   },
+
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",

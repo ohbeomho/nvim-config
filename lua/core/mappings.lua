@@ -1,4 +1,4 @@
-local builtin = require("telescope.builtin")
+local fzflua = require("fzf-lua")
 
 -- Tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
@@ -18,9 +18,9 @@ vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
 vim.keymap.set("n", "<tab>x", "<cmd>tabc<cr>")
 
 -- Telescope
-vim.keymap.set("n", "<leader>ff", builtin.find_files)
-vim.keymap.set("n", "<leader>fg", builtin.live_grep)
-vim.keymap.set("n", "<leader>fb", builtin.buffers)
+vim.keymap.set("n", "<leader>ff", fzflua.files)
+vim.keymap.set("n", "<leader>fg", fzflua.live_grep)
+vim.keymap.set("n", "<leader>fb", fzflua.buffers)
 
 -- Tagbar
 vim.keymap.set("n", "<leader>g", "<cmd>TagbarToggle<cr>")

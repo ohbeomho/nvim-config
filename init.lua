@@ -27,7 +27,6 @@ vim.cmd("colorscheme catppuccin-macchiato")
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
-autocmd("WinNew", { command = "wincmd L" })
 autocmd({ "BufNewFile", "BufRead" }, {
   pattern = "*.ejs",
   callback = function()
