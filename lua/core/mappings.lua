@@ -25,5 +25,5 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers)
 -- Tagbar
 vim.keymap.set("n", "<leader>g", "<cmd>TagbarToggle<cr>")
 
-vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
+vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
