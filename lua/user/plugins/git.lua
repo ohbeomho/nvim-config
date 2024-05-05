@@ -1,12 +1,19 @@
 return {
   {
-    "NeogitOrg/neogit",
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "sindrets/diffview.nvim",
-      "ibhagwan/fzf-lua",
     },
-    opts = {},
+    keys = {
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
   },
   {
     "lewis6991/gitsigns.nvim",
