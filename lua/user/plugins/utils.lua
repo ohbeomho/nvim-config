@@ -7,6 +7,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
+      update_cwd = true,
       update_focused_file = {
         enable = true,
         update_cwd = true,
@@ -65,6 +66,11 @@ return {
   {
     "anuvyklack/windows.nvim",
     dependencies = { "anuvyklack/middleclass" },
+    config = true,
+  },
+  {
+    "notjedi/nvim-rooter.lua",
+    lazy = false,
     config = true,
   },
 }
