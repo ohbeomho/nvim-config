@@ -51,17 +51,6 @@ return {
   { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
-  {
-    "akinsho/toggleterm.nvim",
-    version = "*",
-    opts = {
-      shell = "pwsh",
-      direction = "float",
-      float_opts = {
-        title_pos = "left",
-      },
-    },
-  },
   { "preservim/tagbar" },
   {
     "anuvyklack/windows.nvim",

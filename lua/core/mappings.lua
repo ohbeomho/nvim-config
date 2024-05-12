@@ -9,10 +9,6 @@ vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>c", vim.lsp.buf.code_action)
 
--- Terminal
-vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
-vim.keymap.set("t", "<esc>", "<c-\\><c-n>")
-
 -- Tabs
 vim.keymap.set("n", "<tab>n", "<cmd>tabn<cr>")
 vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
