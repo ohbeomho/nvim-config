@@ -55,7 +55,7 @@ local function file_button(fn, sc, short_fn, autocd)
   end
   local cd_cmd = (autocd and " | cd %:p:h" or "")
   local file_button_el =
-    dashboard.button(sc, ico_txt .. short_fn, "<cmd>e " .. vim.fn.fnameescape(fn) .. cd_cmd .. " <CR>")
+      dashboard.button(sc, ico_txt .. short_fn, "<cmd>e " .. vim.fn.fnameescape(fn) .. cd_cmd .. " <CR>")
   local fn_start = short_fn:match(".*[/\\]")
   if fn_start ~= nil then
     table.insert(fb_hl, { "Comment", #ico_txt - 2, #fn_start + #ico_txt })
@@ -169,10 +169,10 @@ local section_mru = {
 local buttons = {
   type = "group",
   val = {
-    { type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
+    { type = "text",    val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
     { type = "padding", val = 1 },
     dashboard.button("e", "  New file", "<cmd>ene<CR>"),
-    dashboard.button("g", "  Git", "<cmd>LazyGit<cr>"),
+    dashboard.button("SPC l g", "  Git"),
     dashboard.button("SPC f f", "󰈞  Find file"),
     dashboard.button("SPC f g", "󰊄  Live grep"),
     dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
