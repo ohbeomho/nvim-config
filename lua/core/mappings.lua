@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFocus<cr>")
 -- LSP
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
+vim.keymap.set("n", "<leader>c", vim.lsp.buf.code_action)
 
 -- Terminal
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
