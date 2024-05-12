@@ -1,6 +1,10 @@
 return {
-  { "catppuccin/nvim",          name = "catppuccin",                       priority = 1000 },
-  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = true,
+  },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
