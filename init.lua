@@ -32,5 +32,5 @@ autocmd({ "BufNewFile", "BufRead" }, {
 })
 
 if vim.g.neovide then
-  vim.o.guifont = "D2CodingLigature Nerd Font Mono:h14"
+  vim.o.guifont = "D2CodingLigature Nerd Font Mono:h15"
 end
