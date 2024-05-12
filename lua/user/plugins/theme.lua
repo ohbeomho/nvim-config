@@ -1,5 +1,14 @@
 return {
-  { "catppuccin/nvim",          name = "catppuccin",                       priority = 1000 },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      styles = {
+        comments = {},
+      },
+    },
+  },
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   {
     "nvim-lualine/lualine.nvim",
@@ -26,6 +35,9 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     opts = {
+      indent = {
+        char = "│",
+      },
       scope = {
         enabled = true,
         show_start = false,
