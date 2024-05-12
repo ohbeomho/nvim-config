@@ -54,4 +54,13 @@ return {
       },
     },
   },
+  {
+    "alvarosevilla95/luatab.nvim",
+    dependencies = { "kyazdani42/nvim-web-devicons" },
+    opts = {
+      separator = function()
+        return "│"
+      end,
+    },
+  },
 }
