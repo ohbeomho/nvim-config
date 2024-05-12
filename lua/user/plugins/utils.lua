@@ -62,4 +62,9 @@ return {
     },
   },
   { "preservim/tagbar" },
+  {
+    "anuvyklack/windows.nvim",
+    dependencies = { "anuvyklack/middleclass" },
+    config = true,
+  },
 }
