@@ -19,7 +19,6 @@ vim.opt.smarttab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
-vim.opt.linespace = -1
 
 vim.cmd("language en_US")
 vim.cmd("colorscheme catppuccin-macchiato")
@@ -35,7 +34,7 @@ autocmd({ "BufNewFile", "BufRead" }, {
 })
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMonoNL NFM:h13"
+  vim.o.guifont = "D2CodingLigature Nerd Font Mono:h14"
 end
 
 -- Set root dir
