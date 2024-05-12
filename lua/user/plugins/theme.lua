@@ -4,10 +4,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      styles = {
-        comments = {},
-        conditionals = {},
-      },
+      no_italic = true,
     },
   },
   {
