@@ -18,7 +18,7 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
 
-vim.cmd("language en_US")
+vim.cmd("language en_US.utf8")
 vim.cmd("colorscheme catppuccin-macchiato")
 
 local autocmd = vim.api.nvim_create_autocmd
