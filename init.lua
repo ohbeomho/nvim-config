@@ -8,7 +8,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
-vim.opt.guicursor = "n-v-c-i:block"
+vim.opt.guicursor = "n-v-c:block,i:ver25"
 vim.opt.number = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
@@ -33,4 +33,7 @@ autocmd({ "BufNewFile", "BufRead" }, {
 
 if vim.g.neovide then
   vim.o.guifont = "D2CodingLigature Nerd Font Mono:h15"
+  vim.g.neovide_cursor_animation_length = 0.3
+  vim.g.neovide_scroll_animation_length = 0.3
+  vim.g.neovide_position_animation_length = 0.3
 end
