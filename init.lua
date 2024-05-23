@@ -33,4 +33,7 @@ autocmd({ "BufNewFile", "BufRead" }, {
 
 if vim.g.neovide then
   vim.o.guifont = "D2CodingLigature Nerd Font Mono:h15"
+  vim.g.neovide_cursor_animation_length = 0.3
+  vim.g.neovide_scroll_animation_length = 0.3
+  vim.g.neovide_position_animation_length = 0.3
 end
