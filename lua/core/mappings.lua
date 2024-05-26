@@ -19,14 +19,11 @@ vim.keymap.set("n", "<leader>ff", fzflua.files)
 vim.keymap.set("n", "<leader>fg", fzflua.live_grep)
 vim.keymap.set("n", "<leader>fb", fzflua.buffers)
 
--- Tagbar
-vim.keymap.set("n", "<leader>g", "<cmd>TagbarToggle<cr>")
-
-vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
-vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
-
 -- Windows
 vim.keymap.set("n", "<C-w>z", "<cmd>WindowsMaximize<cr>")
 vim.keymap.set("n", "<C-w>|", "<cmd>WindowsMaximizeVertically<cr>")
 vim.keymap.set("n", "<C-w>_", "<cmd>WindowsMaximizeHorizontally<cr>")
 vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<cr>")
+
+vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
+vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")

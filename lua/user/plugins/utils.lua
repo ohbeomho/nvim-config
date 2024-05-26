@@ -51,7 +51,6 @@ return {
   { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
-  { "preservim/tagbar" },
   {
     "anuvyklack/windows.nvim",
     dependencies = { "anuvyklack/middleclass" },
