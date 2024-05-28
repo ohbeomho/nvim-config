@@ -18,6 +18,8 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.ignorecase = true
 
+vim.opt.foldenable = false
+
 vim.cmd("language en_US.utf8")
 vim.cmd("colorscheme catppuccin-macchiato")
 
