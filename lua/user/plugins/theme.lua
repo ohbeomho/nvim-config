@@ -24,16 +24,6 @@ return {
     },
   },
   {
-    "goolord/alpha-nvim",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      require("alpha").setup(require("user.themes.theta-edit").config)
-    end,
-  },
-  {
     "alvarosevilla95/luatab.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
