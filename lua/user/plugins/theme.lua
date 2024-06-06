@@ -1,11 +1,18 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
-    opts = {
-      no_italic = true,
-    },
+    config = function()
+      require("gruvbox").setup({
+        italic = {
+          strings = false,
+          emphasis = false,
+        },
+      })
+
+      vim.o.background = "dark"
+      vim.cmd("colorscheme gruvbox")
+    end,
   },
   {
     "folke/todo-comments.nvim",
