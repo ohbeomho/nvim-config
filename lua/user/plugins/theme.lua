@@ -7,6 +7,9 @@ return {
         italic = {
           strings = false,
           emphasis = false,
+          comments = true,
+          folds = false,
+          operators = false,
         },
       })
 
