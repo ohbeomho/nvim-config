@@ -46,7 +46,6 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
   },
-
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
   { "wakatime/vim-wakatime", lazy = false },
   "brenoprata10/nvim-highlight-colors",
