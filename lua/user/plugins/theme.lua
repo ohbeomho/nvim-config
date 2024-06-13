@@ -1,20 +1,11 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "oxfist/night-owl.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
-      require("gruvbox").setup({
-        italic = {
-          strings = false,
-          emphasis = false,
-          comments = true,
-          folds = false,
-          operators = false,
-        },
-      })
-
-      vim.o.background = "dark"
-      vim.cmd("colorscheme gruvbox")
+      require("night-owl").setup()
+      vim.cmd.colorscheme("night-owl")
     end,
   },
   {
