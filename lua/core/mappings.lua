@@ -27,3 +27,7 @@ vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<cr>")
 
 vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
+
+-- Scrolling
+vim.keymap.set("n", "<C-j>", "<C-e>")
+vim.keymap.set("n", "<C-k>", "<C-y>")
