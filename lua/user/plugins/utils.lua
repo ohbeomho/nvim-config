@@ -24,11 +24,6 @@ return {
   },
   "mateuszwieloch/automkdir.nvim",
   {
-    "numToStr/Comment.nvim",
-    config = true,
-    lazy = false,
-  },
-  {
     "altermo/ultimate-autopair.nvim",
     event = { "InsertEnter", "CmdlineEnter" },
     config = true,
