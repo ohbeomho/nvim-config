@@ -1,11 +1,11 @@
 return {
   {
-    "oxfist/night-owl.nvim",
-    lazy = false,
-    priority = 1000,
+    "navarasu/onedark.nvim",
     config = function()
-      require("night-owl").setup()
-      vim.cmd.colorscheme("night-owl")
+      require("onedark").setup({
+        style = "warm",
+      })
+      require("onedark").load()
     end,
   },
   {
