@@ -31,3 +31,7 @@ vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
 -- Scrolling
 vim.keymap.set("n", "<C-j>", "<C-e>")
 vim.keymap.set("n", "<C-k>", "<C-y>")
+
+-- Leap.nvim
+vim.keymap.set("n", "s", "<Plug>(leap)")
+vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
