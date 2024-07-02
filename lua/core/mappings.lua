@@ -29,8 +29,13 @@ vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
 
 -- Scrolling
-vim.keymap.set("n", "<C-j>", "<C-e>")
-vim.keymap.set("n", "<C-k>", "<C-y>")
+local neoscroll = require("neoscroll")
+vim.keymap.set("n", "<C-j>", function()
+  neoscroll.scroll(0.2, false, 100)
+end)
+vim.keymap.set("n", "<C-k>", function()
+  neoscroll.scroll(-0.2, false, 100)
+end)
 
 -- Leap.nvim
 vim.keymap.set("n", "s", "<Plug>(leap)")
