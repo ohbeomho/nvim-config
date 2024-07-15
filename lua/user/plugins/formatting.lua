@@ -1,6 +1,6 @@
 return {
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     config = function()
       local null_ls = require("null-ls")
 
@@ -12,7 +12,11 @@ return {
         sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.prettierd,
-          null_ls.builtins.formatting.clang_format,
+          null_ls.builtins.formatting.clang_format.with({
+            extra_args = {
+              "-style={DerivePointerAlignment: false, PointerAlignment: Left, AllowShortFunctionsOnASingleLine: None}",
+            },
+          }),
           null_ls.builtins.formatting.cbfmt,
         },
         on_attach = function(client, bufnr)
