@@ -25,6 +25,12 @@ vim.cmd("language en_US.utf8")
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
+if vim.g.neovide then
+  vim.g.neovide_cursor_animation_length = 0.3
+  vim.g.neovide_position_animation_length = 0.3
+  vim.g.neovide_scroll_animation_length = 0.3
+end
+
 autocmd({ "BufNewFile", "BufRead" }, {
   pattern = "*.ejs",
   callback = function()
