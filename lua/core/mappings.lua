@@ -14,7 +14,7 @@ vim.keymap.set("n", "<tab>x", "<cmd>tabc<cr>")
 
 local fzflua = require("fzf-lua")
 
--- Telescope
+-- fzf-lua
 vim.keymap.set("n", "<leader>ff", fzflua.files)
 vim.keymap.set("n", "<leader>fg", fzflua.live_grep)
 vim.keymap.set("n", "<leader>fb", fzflua.buffers)
