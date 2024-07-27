@@ -14,7 +14,7 @@ return {
           null_ls.builtins.formatting.prettierd,
           null_ls.builtins.formatting.clang_format.with({
             extra_args = {
-              "-style={DerivePointerAlignment: false, PointerAlignment: Left, AllowShortFunctionsOnASingleLine: None}",
+              "-style={DerivePointerAlignment: false, PointerAlignment: Right, AllowShortFunctionsOnASingleLine: None}",
             },
           }),
           null_ls.builtins.formatting.cbfmt,
