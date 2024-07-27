@@ -24,9 +24,11 @@ return {
   },
   "mateuszwieloch/automkdir.nvim",
   {
-    "altermo/ultimate-autopair.nvim",
-    event = { "InsertEnter", "CmdlineEnter" },
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
     config = true,
+    -- use opts = {} for passing setup options
+    -- this is equalent to setup({}) function
   },
   {
     "kylechui/nvim-surround",
