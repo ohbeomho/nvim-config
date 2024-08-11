@@ -7,6 +7,9 @@ require("core.snippets")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Enable persistent undo
+vim.o.undofile = true
+
 -- Disable mouse
 vim.opt.mouse = ""
 -- Block cursor when Normal, Visual, Command
