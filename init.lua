@@ -15,8 +15,9 @@ vim.opt.mouse = ""
 -- Block cursor when Normal, Visual, Command
 -- Line cursor when Insert
 vim.opt.guicursor = "n-v-c:block,i:ver25"
--- Line numbers
+-- Line numbers (Relative)
 vim.opt.number = true
+vim.opt.relativenumber = true
 -- Indent
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
