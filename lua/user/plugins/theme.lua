@@ -1,4 +1,5 @@
 return {
+  { "prichrd/netrw.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, opts = {} },
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -19,7 +20,6 @@ return {
       options = {
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
-        disabled_filetypes = { "netrw" },
       },
     },
   },
