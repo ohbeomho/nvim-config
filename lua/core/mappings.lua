@@ -1,6 +1,5 @@
 -- Tree
-vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
-vim.keymap.set("n", "<leader>E", "<cmd>NvimTreeFocus<cr>")
+vim.keymap.set("n", "<leader>e", "<cmd>Lex<cr>")
 
 -- LSP
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
