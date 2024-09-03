@@ -33,12 +33,8 @@ vim.cmd("language en_US.utf8")
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
--- Neovide settings
 if vim.g.neovide then
-  -- Longer animation length
-  vim.g.neovide_cursor_animation_length = 0.3
-  vim.g.neovide_position_animation_length = 0.3
-  vim.g.neovide_scroll_animation_length = 0.3
+  require("user.neovide")
 end
 
 -- Set file type to html when ejs file open
