@@ -7,8 +7,8 @@ vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>c", vim.lsp.buf.code_action)
 
 -- Tabs
-vim.keymap.set("n", "]<tab>", "<cmd>tabn<cr>")
-vim.keymap.set("n", "[<tab>", "<cmd>tabp<cr>")
+vim.keymap.set("n", "<tab>n", "<cmd>tabn<cr>")
+vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
 vim.keymap.set("n", "<tab>x", "<cmd>tabc<cr>")
 
 local fzflua = require("fzf-lua")
