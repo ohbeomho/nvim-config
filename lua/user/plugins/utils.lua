@@ -1,13 +1,6 @@
 return {
   "mateuszwieloch/automkdir.nvim",
   {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = true,
-    -- use opts = {} for passing setup options
-    -- this is equalent to setup({}) function
-  },
-  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
@@ -81,5 +74,13 @@ return {
         hide_cursor = false,
       })
     end,
+  },
+  {
+    "jiaoshijie/undotree",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true,
+    keys = { -- load the plugin only when using it's keybinding:
+      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+    },
   },
 }

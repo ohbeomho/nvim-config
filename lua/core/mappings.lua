@@ -24,9 +24,13 @@ vim.keymap.set("n", "<C-w>|", "<cmd>WindowsMaximizeVertically<cr>")
 vim.keymap.set("n", "<C-w>_", "<cmd>WindowsMaximizeHorizontally<cr>")
 vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<cr>")
 
-vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
-vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
-
 -- Leap.nvim
 vim.keymap.set("n", "s", "<Plug>(leap)")
 vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
+
+-- Undotree
+vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, silent = true })
+
+-- Others
+vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
+vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
