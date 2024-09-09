@@ -21,6 +21,7 @@ return {
 
           if server_name == "clang" then
             require("lspconfig")[server_name].setup({
+              capabilities = capabilities,
               on_attach = function(client)
                 client.server_capabilities.documentFormattingProvider = false
                 client.server_capabilities.documentRangeFormattingProvider = false
@@ -30,10 +31,9 @@ return {
                 "--offset-encoding=utf-16",
               },
             })
-            return
+          else
+            require("lspconfig")[server_name].setup({ capabilities = capabilities })
           end
-
-          require("lspconfig")[server_name].setup({ capabilities = capabilities })
         end,
       })
     end,
