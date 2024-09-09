@@ -1,5 +1,8 @@
 -- Oil
-vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
+vim.keymap.set("n", "<leader>e", function()
+  vim.cmd("vsplit | wincmd h")
+  require("oil").open()
+end)
 
 -- LSP
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
