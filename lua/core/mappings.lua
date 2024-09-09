@@ -1,5 +1,5 @@
--- Tree
-vim.keymap.set("n", "<leader>e", "<cmd>Lex<cr>")
+-- Oil
+vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>")
 
 -- LSP
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
