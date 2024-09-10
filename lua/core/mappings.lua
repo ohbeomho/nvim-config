@@ -1,5 +1,10 @@
 -- Oil
 vim.keymap.set("n", "<leader>e", function()
+  if vim.bo.filetype == "oil" then
+    vim.cmd("quit")
+    return
+  end
+
   vim.cmd("vsplit | wincmd h")
   require("oil").open()
 end)
@@ -33,6 +38,16 @@ vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, silent = true })
+
+-- Harpoon
+local harpoon = require("harpoon")
+
+vim.keymap.set("n", "<leader>a", function()
+  harpoon:list():add()
+end)
+vim.keymap.set("n", "<leader>lh", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
 
 -- Others
 vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
