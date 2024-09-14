@@ -1,12 +1,6 @@
 -- Oil
 vim.keymap.set("n", "<leader>e", function()
-  if vim.bo.filetype == "oil" then
-    vim.cmd("quit")
-    return
-  end
-
-  vim.cmd("vsplit | wincmd h")
-  require("oil").open()
+  require("oil").open_float()
 end)
 
 -- LSP
