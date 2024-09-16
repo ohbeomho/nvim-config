@@ -43,6 +43,9 @@ vim.keymap.set("n", "<leader>lh", function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
 end)
 
+-- Marks
+vim.keymap.set("n", "<leader>dm", "<cmd>delm! | delm A-Z0-9<cr>")
+
 -- Others
 vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
