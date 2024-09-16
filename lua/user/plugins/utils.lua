@@ -114,4 +114,9 @@ return {
       --Config goes here
     },
   },
+  {
+    "chentoast/marks.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 }
