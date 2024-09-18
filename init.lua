@@ -24,8 +24,6 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 -- Case insensitive when searching
 vim.opt.ignorecase = true
--- Disable code folding
-vim.opt.foldenable = false
 vim.opt.termguicolors = true
 
 vim.cmd("language en_US.utf8")
