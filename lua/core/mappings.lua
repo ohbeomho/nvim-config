@@ -4,7 +4,7 @@ vim.keymap.set("n", "<leader>e", function()
 end)
 
 -- LSP
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
+vim.keymap.set("n", "<f2>", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>c", vim.lsp.buf.code_action)
 
