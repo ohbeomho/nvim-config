@@ -14,7 +14,6 @@ return {
     config = true,
   },
   { "wakatime/vim-wakatime", lazy = false },
-  "brenoprata10/nvim-highlight-colors",
   "andweeb/presence.nvim",
   {
     "anuvyklack/windows.nvim",
@@ -74,14 +73,6 @@ return {
         hide_cursor = false,
       })
     end,
-  },
-  {
-    "jiaoshijie/undotree",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = true,
-    keys = { -- load the plugin only when using it's keybinding:
-      { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
-    },
   },
   {
     "stevearc/oil.nvim",

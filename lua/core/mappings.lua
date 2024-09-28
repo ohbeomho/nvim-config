@@ -1,6 +1,6 @@
 -- Oil
 vim.keymap.set("n", "<leader>e", function()
-	require("oil").open_float()
+  require("oil").open_float()
 end)
 
 -- LSP
@@ -29,9 +29,6 @@ vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<cr>")
 -- Leap.nvim
 vim.keymap.set("n", "s", "<Plug>(leap)")
 vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
-
--- Undotree
-vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, silent = true })
 
 -- Marks
 vim.keymap.set("n", "<leader>dm", "<cmd>delm! | delm A-Z0-9<cr>")
