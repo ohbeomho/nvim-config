@@ -1,6 +1,6 @@
 -- Oil
 vim.keymap.set("n", "<leader>e", function()
-  require("oil").open_float()
+	require("oil").open_float()
 end)
 
 -- LSP
@@ -32,16 +32,6 @@ vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, silent = true })
-
--- Harpoon
-local harpoon = require("harpoon")
-
-vim.keymap.set("n", "<leader>a", function()
-  harpoon:list():add()
-end)
-vim.keymap.set("n", "<leader>lh", function()
-  harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
 
 -- Marks
 vim.keymap.set("n", "<leader>dm", "<cmd>delm! | delm A-Z0-9<cr>")
