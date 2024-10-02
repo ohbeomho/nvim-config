@@ -1,7 +1,7 @@
 return {
   { "williamboman/mason.nvim", lazy = false },
   "williamboman/mason-lspconfig.nvim",
-  { "folke/neodev.nvim", config = true },
+  { "folke/neodev.nvim",       config = true },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -10,6 +10,7 @@ return {
       require("mason").setup()
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "clangd", "ts_ls", "emmet_language_server", "cssls", "julials" },
+        automatic_installation = true,
       })
       require("mason-lspconfig").setup_handlers({
         function(server_name)
