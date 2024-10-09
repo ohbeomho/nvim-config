@@ -9,9 +9,8 @@ vim.o.undofile = true
 
 -- Disable mouse
 vim.opt.mouse = ""
--- Block cursor when Normal, Visual, Command
--- Line cursor when Insert
-vim.opt.guicursor = "n-v-c:block,i:ver25"
+-- Always block cursor
+vim.opt.guicursor = "n-v-c-i:block"
 -- Line numbers (Relative)
 vim.opt.number = true
 vim.opt.relativenumber = true
