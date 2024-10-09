@@ -34,5 +34,23 @@ vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
 vim.keymap.set("n", "<leader>dm", "<cmd>delm! | delm A-Z0-9<cr>")
 
 -- Others
-vim.keymap.set({ "n", "v" }, "*", "<cmd>keepjumps normal! mi*`i<cr>")
+vim.keymap.set("n", "*", "<cmd>keepjumps normal! mi*`i<cr>")
 vim.keymap.set("n", "<leader>h", "<cmd>nohl<cr>")
+
+function Highlight_selection()
+  local vstart = vim.fn.getpos("'<")
+  local vend = vim.fn.getpos("'>")
+  local line_start = vstart[2]
+  local line_end = vend[2]
+
+  if line_start ~= line_end then
+    return
+  end
+
+  local line = vim.fn.getline(".")
+  local selection = string.sub(line, vstart[3], vend[3])
+  vim.cmd("/" .. selection)
+  vim.api.nvim_feedkeys("N", "n", true)
+end
+
+vim.keymap.set("x", "*", ":lua Highlight_selection()<cr>")
