@@ -1,2 +1,3 @@
 plugin
 lua/user/neovide.lua
+lazy-lock.json
