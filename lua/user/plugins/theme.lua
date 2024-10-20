@@ -1,10 +1,12 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
+    "Mofiqul/vscode.nvim",
     config = function()
-      vim.cmd.colorscheme("catppuccin-macchiato")
+      require("vscode").setup({
+        italic_comments = false,
+        underline_links = true,
+      })
+      vim.cmd.colorscheme("vscode")
     end,
   },
   {
@@ -17,6 +19,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
+        theme = "vscode",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       },
