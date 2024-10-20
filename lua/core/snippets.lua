@@ -14,7 +14,7 @@ ls.add_snippets("javascript", {
     t(")"),
   }),
   s({
-    trig = "cle",
+    trig = "cer",
     namr = "ConsoleError",
     dscr = "Log error message to console",
   }, {
