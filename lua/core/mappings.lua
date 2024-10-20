@@ -26,9 +26,8 @@ vim.keymap.set("n", "<C-w>|", "<cmd>WindowsMaximizeVertically<cr>")
 vim.keymap.set("n", "<C-w>_", "<cmd>WindowsMaximizeHorizontally<cr>")
 vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<cr>")
 
--- Leap.nvim
-vim.keymap.set("n", "s", "<Plug>(leap)")
-vim.keymap.set("n", "S", "<Plug>(leap-from-window)")
+-- Easymotion
+vim.keymap.set("n", "s", "<leader><leader>s", { remap = true })
 
 -- Marks
 vim.keymap.set("n", "<leader>dm", "<cmd>delm! | delm A-Z0-9<cr>")

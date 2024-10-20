@@ -26,8 +26,7 @@ return {
     config = true,
   },
   {
-    "ggandor/leap.nvim",
-    dependencies = { "tpope/vim-repeat" },
+    "easymotion/vim-easymotion",
   },
   {
     "folke/trouble.nvim",
