@@ -50,3 +50,4 @@ function Highlight_selection()
 end
 
 vim.keymap.set("x", "*", ":lua Highlight_selection()<cr>")
+vim.keymap.set("i", "jj", "<esc>")
