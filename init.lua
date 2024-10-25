@@ -10,7 +10,7 @@ vim.o.undofile = true
 -- Disable mouse
 vim.opt.mouse = ""
 -- Always block cursor
-vim.opt.guicursor = "n-v-c-i:block"
+vim.opt.guicursor = "n-v-c:block,i:ver20"
 -- Line numbers (Relative)
 vim.opt.number = true
 vim.opt.relativenumber = true
