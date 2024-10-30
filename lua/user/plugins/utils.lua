@@ -27,6 +27,9 @@ return {
   },
   {
     "easymotion/vim-easymotion",
+    config = function()
+      vim.g.EasyMotion_smartcase = 1
+    end,
   },
   {
     "folke/trouble.nvim",
