@@ -114,4 +114,13 @@ return {
       hybrid_modes = { "n" },
     },
   },
+  {
+    "LunarVim/bigfile.nvim",
+    opts = {
+      features = {
+        "lsp",
+        "treesitter",
+      },
+    },
+  },
 }
