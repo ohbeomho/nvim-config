@@ -132,5 +132,10 @@ return {
       },
     },
   },
-  { "chrisgrieser/nvim-spider", lazy = true },
+  {
+    "chrisgrieser/nvim-spider",
+    opts = {
+      skipInsignificantPunctuation = false,
+    },
+  },
 }
