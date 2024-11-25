@@ -21,7 +21,6 @@ return {
               "-style={DerivePointerAlignment: false, PointerAlignment: Right, AllowShortFunctionsOnASingleLine: None}",
             },
           }),
-          null_ls.builtins.formatting.cbfmt,
         },
         on_attach = function(client, bufnr)
           if client.supports_method("textDocument/formatting") then
