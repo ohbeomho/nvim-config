@@ -42,19 +42,4 @@ return {
       require("nvim-highlight-colors").setup({})
     end,
   },
-  {
-    "yamatsum/nvim-cursorline",
-    opts = {
-      cursorline = {
-        enable = true,
-        timeout = 500,
-        number = false,
-      },
-      cursorword = {
-        enable = true,
-        min_length = 2,
-        hl = { underline = true },
-      },
-    },
-  },
 }
