@@ -42,4 +42,8 @@ return {
       require("nvim-highlight-colors").setup({})
     end,
   },
+  {
+    "folke/twilight.nvim",
+    opts = {},
+  },
 }
