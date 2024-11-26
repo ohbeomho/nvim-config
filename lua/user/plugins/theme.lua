@@ -44,6 +44,14 @@ return {
   },
   {
     "folke/twilight.nvim",
-    opts = {},
+    opts = {
+      dimming = {
+        alpha = 0.5,
+      },
+      context = 14,
+    },
+    config = function()
+      vim.cmd("TwilightEnable")
+    end,
   },
 }
