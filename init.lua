@@ -30,10 +30,6 @@ vim.cmd("language en_US.utf8")
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
-if vim.g.neovide then
-  require("user.neovide")
-end
-
 -- Set file type to html when ejs file open
 -- to use html highlighting
 autocmd({ "BufNewFile", "BufRead" }, {
