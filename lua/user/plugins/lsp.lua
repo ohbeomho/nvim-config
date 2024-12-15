@@ -1,7 +1,7 @@
 return {
   { "williamboman/mason.nvim", lazy = false },
   "williamboman/mason-lspconfig.nvim",
-  { "folke/neodev.nvim",       config = true },
+  { "folke/neodev.nvim", config = true },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -16,7 +16,7 @@ return {
         function(server_name)
           local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-          if server_name == "clang" then
+          if server_name == "clangd" then
             require("lspconfig")[server_name].setup({
               capabilities = capabilities,
               on_attach = function(client)
