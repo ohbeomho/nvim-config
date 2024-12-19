@@ -4,6 +4,7 @@ return {
   { "folke/neodev.nvim", config = true },
   {
     "neovim/nvim-lspconfig",
+    dependencies = { "saghen/blink.cmp" },
     config = function()
       require("neodev").setup({})
 
@@ -14,7 +15,7 @@ return {
       })
       require("mason-lspconfig").setup_handlers({
         function(server_name)
-          local capabilities = require("cmp_nvim_lsp").default_capabilities()
+          local capabilities = require("blink.cmp").get_lsp_capabilities()
 
           if server_name == "clangd" then
             require("lspconfig")[server_name].setup({

@@ -1,83 +1,72 @@
 return {
-  "hrsh7th/cmp-nvim-lsp",
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-path",
-  "hrsh7th/cmp-cmdline",
-  "hrsh7th/cmp-nvim-lsp-signature-help",
   {
-    "L3MON4D3/LuaSnip",
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-    end,
-  },
-  "saadparwaiz1/cmp_luasnip",
-  "rafamadriz/friendly-snippets",
-  {
-    "hrsh7th/nvim-cmp",
-    config = function()
-      local cmp = require("cmp")
-      local luasnip = require("luasnip")
+    "saghen/blink.cmp",
+    -- optional: provides snippets for the snippet source
+    dependencies = "rafamadriz/friendly-snippets",
 
-      cmp.setup({
-        snippet = {
-          expand = function(args)
-            require("luasnip").lsp_expand(args.body)
+    -- use a release tag to download pre-built binaries
+    version = "v0.*",
+    -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+    -- build = 'cargo build --release',
+    -- If you use nix, you can build from source using latest nightly rust with:
+    -- build = 'nix run .#build-plugin',
+
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+      -- 'default' for mappings similar to built-in completion
+      -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
+      -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
+      -- see the "default configuration" section below for full documentation on how to define
+      -- your own keymap.
+      keymap = {
+        preset = "super-tab",
+        ["<C-j>"] = { "select_next", "fallback" },
+        ["<C-k>"] = { "select_prev", "fallback" },
+        ["<Tab>"] = {
+          function(cmp)
+            if cmp.snippet_active() then
+              return cmp.accept()
+            else
+              return cmp.select_and_accept()
+            end
           end,
+          "snippet_forward",
+          "fallback",
         },
-        mapping = {
-          ["<tab>"] = cmp.mapping.confirm({ select = true }),
-          ["<c-space>"] = cmp.mapping.complete(),
-          ["<c-e>"] = cmp.mapping.abort(),
-          ["<c-j>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_next_item()
-            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-            -- that way you will only jump inside the snippet region
-            elseif luasnip.expand_or_jumpable() then
-              luasnip.expand_or_jump()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-          ["<c-k>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-              luasnip.jump(-1)
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
-        },
-        sources = {
-          { name = "nvim_lsp_signature_help" },
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-        },
-      })
+        ["<S-Tab>"] = { "snippet_backward", "fallback" },
+        ["<C-e>"] = { "cancel", "hide", "fallback" },
+      },
 
-      cmp.setup.filetype("gitcommit", {
-        sources = {
-          { name = "git" },
-          { name = "buffer" },
-        },
-      })
+      appearance = {
+        -- Sets the fallback highlight groups to nvim-cmp's highlight groups
+        -- Useful for when your theme doesn't support blink.cmp
+        -- will be removed in a future release
+        use_nvim_cmp_as_default = true,
+        -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+        -- Adjusts spacing to ensure icons are aligned
+        nerd_font_variant = "mono",
+      },
 
-      cmp.setup.cmdline({ "/", "?" }, {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = "buffer" },
-        },
-      })
+      -- default list of enabled providers defined so that you can extend it
+      -- elsewhere in your config, without redefining it, via `opts_extend`
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer" },
+        -- optionally disable cmdline completions
+        -- cmdline = {},
+      },
 
-      cmp.setup.cmdline(":", {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = "path" },
-          { name = "cmdline" },
+      completion = {
+        list = {
+          selection = "auto_insert",
         },
-      })
-    end,
+      },
+
+      -- experimental signature help support
+      -- signature = { enabled = true }
+    },
+    -- allows extending the providers array elsewhere in your config
+    -- without having to redefine it
+    opts_extend = { "sources.default" },
   },
 }
