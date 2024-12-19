@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 require("core.lazy")
 require("core.mappings")
-require("core.snippets")
 
 -- Enable persistent undo
 vim.o.undofile = true
@@ -33,8 +32,8 @@ local augroup = vim.api.nvim_create_augroup
 -- Set file type to html when ejs file open
 -- to use html highlighting
 autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = "*.ejs",
-  callback = function()
-    vim.bo.filetype = "html"
-  end,
+	pattern = "*.ejs",
+	callback = function()
+		vim.bo.filetype = "html"
+	end,
 })
