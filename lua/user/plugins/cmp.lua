@@ -23,18 +23,6 @@ return {
         preset = "super-tab",
         ["<C-j>"] = { "select_next", "fallback" },
         ["<C-k>"] = { "select_prev", "fallback" },
-        ["<Tab>"] = {
-          function(cmp)
-            if cmp.snippet_active() then
-              return cmp.accept()
-            else
-              return cmp.select_and_accept()
-            end
-          end,
-          "snippet_forward",
-          "fallback",
-        },
-        ["<S-Tab>"] = { "snippet_backward", "fallback" },
         ["<C-e>"] = { "cancel", "hide", "fallback" },
       },
 
@@ -57,18 +45,16 @@ return {
       },
 
       completion = {
+        keyword = { range = "prefix" },
         list = {
-          selection = "auto_insert",
+          selection = "preselect",
         },
-        accept = {
-          auto_brackets = {
-            enabled = false,
-          },
-        },
+        documentation = { auto_show = true },
+        ghost_text = { enabled = true },
       },
 
       -- experimental signature help support
-      -- signature = { enabled = true }
+      signature = { enabled = true },
     },
     -- allows extending the providers array elsewhere in your config
     -- without having to redefine it
