@@ -26,6 +26,8 @@ return {
         ["<C-j>"] = { "select_next", "fallback" },
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<C-e>"] = { "cancel", "hide", "fallback" },
+        ["<C-n>"] = { "snippet_forward", "fallback" },
+        ["<C-p>"] = { "snippet_backward", "fallback" },
       },
 
       appearance = {
