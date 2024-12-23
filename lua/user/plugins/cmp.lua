@@ -47,9 +47,10 @@ return {
       completion = {
         keyword = { range = "prefix" },
         list = {
-          selection = "auto_insert",
+          selection = "preselect",
         },
         documentation = { auto_show = true },
+        ghost_text = { enabled = true },
       },
 
       -- experimental signature help support
