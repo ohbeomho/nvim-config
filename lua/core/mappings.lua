@@ -1,6 +1,6 @@
 -- Oil
 vim.keymap.set("n", "<leader>e", function()
-  require("oil").open_float()
+  require("oil").open()
 end)
 
 -- LSP
