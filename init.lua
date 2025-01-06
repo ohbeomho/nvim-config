@@ -23,6 +23,8 @@ vim.opt.smartindent = true
 -- Case insensitive when searching
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
+-- Always show tabline
+vim.opt.showtabline = 2
 
 vim.cmd("language en_US.utf8")
 
@@ -32,8 +34,8 @@ local augroup = vim.api.nvim_create_augroup
 -- Set file type to html when ejs file open
 -- to use html highlighting
 autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = "*.ejs",
-	callback = function()
-		vim.bo.filetype = "html"
-	end,
+  pattern = "*.ejs",
+  callback = function()
+    vim.bo.filetype = "html"
+  end,
 })
