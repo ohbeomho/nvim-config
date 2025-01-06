@@ -28,11 +28,7 @@ return {
   {
     "alvarosevilla95/luatab.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      separator = function()
-        return "│"
-      end,
-    },
+    opts = {},
   },
   {
     "brenoprata10/nvim-highlight-colors",
