@@ -11,11 +11,7 @@ return {
       null_ls.setup({
         sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.prettierd.with({
-            extra_args = {
-              "--no-semi",
-            },
-          }),
+          null_ls.builtins.formatting.prettierd,
           null_ls.builtins.formatting.clang_format.with({
             extra_args = {
               "-style={DerivePointerAlignment: false, PointerAlignment: Right, AllowShortFunctionsOnASingleLine: None}",
