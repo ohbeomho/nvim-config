@@ -1,7 +1,6 @@
 -- Oil
-vim.keymap.set("n", "<leader>e", function()
-  require("oil").open()
-end)
+local oil = require("oil")
+vim.keymap.set("n", "<leader>e", oil.toggle_float)
 
 -- LSP
 vim.keymap.set("n", "<f2>", vim.lsp.buf.rename)
@@ -14,9 +13,8 @@ vim.keymap.set("n", "<tab>n", "<cmd>tabn<cr>")
 vim.keymap.set("n", "<tab>p", "<cmd>tabp<cr>")
 vim.keymap.set("n", "<tab>x", "<cmd>tabc<cr>")
 
-local fzflua = require("fzf-lua")
-
 -- fzf-lua
+local fzflua = require("fzf-lua")
 vim.keymap.set("n", "<leader>ff", fzflua.files)
 vim.keymap.set("n", "<leader>fg", fzflua.live_grep)
 vim.keymap.set("n", "<leader>fb", fzflua.buffers)
