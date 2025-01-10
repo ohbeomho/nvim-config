@@ -50,9 +50,6 @@ return {
 
       completion = {
         keyword = { range = "prefix" },
-        list = {
-          selection = "preselect",
-        },
         documentation = { auto_show = true },
       },
 
