@@ -1,13 +1,8 @@
 return {
   {
-    "Mofiqul/vscode.nvim",
-    config = function()
-      require("vscode").setup({
-        italic_comments = false,
-        underline_links = true,
-      })
-      vim.cmd.colorscheme("vscode")
-    end,
+    "tribela/transparent.nvim",
+    event = "VimEnter",
+    config = true,
   },
   {
     "folke/todo-comments.nvim",
@@ -19,7 +14,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "vscode",
+        theme = "auto",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       },
