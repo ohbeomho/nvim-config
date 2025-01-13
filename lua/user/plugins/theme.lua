@@ -1,8 +1,9 @@
 return {
   {
-    "tribela/transparent.nvim",
-    event = "VimEnter",
-    config = true,
+    "shaunsingh/nord.nvim",
+    config = function()
+      vim.cmd([[colorscheme nord]])
+    end,
   },
   {
     "folke/todo-comments.nvim",
@@ -14,7 +15,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "auto",
+        theme = "nord",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       },

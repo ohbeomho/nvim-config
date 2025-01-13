@@ -32,13 +32,6 @@ vim.cmd("language en_US.utf8")
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
-vim.cmd([[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]])
-
 -- Set file type to html when ejs file open
 -- to use html highlighting
 autocmd({ "BufNewFile", "BufRead" }, {
