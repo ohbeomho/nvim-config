@@ -1,8 +1,8 @@
 return {
   {
-    "shaunsingh/nord.nvim",
+    "Mofiqul/dracula.nvim",
     config = function()
-      vim.cmd([[colorscheme nord]])
+      vim.cmd([[colorscheme dracula]])
     end,
   },
   {
@@ -15,7 +15,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "nord",
+        theme = "dracula",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       },
