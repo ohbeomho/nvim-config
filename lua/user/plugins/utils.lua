@@ -113,4 +113,9 @@ return {
     },
   },
   "hood/popui.nvim",
+  {
+    "rachartier/tiny-glimmer.nvim",
+    event = "TextYankPost",
+    opts = {},
+  },
 }
