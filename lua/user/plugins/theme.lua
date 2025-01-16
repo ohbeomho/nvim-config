@@ -1,8 +1,8 @@
 return {
   {
-    "Mofiqul/dracula.nvim",
+    "navarasu/onedark.nvim",
     config = function()
-      vim.cmd([[colorscheme dracula]])
+      require("onedark").load()
     end,
   },
   {
