@@ -51,7 +51,7 @@ return {
         list = {
           selection = {
             preselect = true,
-            auto_select = false,
+            auto_insert = false,
           },
         },
         keyword = { range = "prefix" },
