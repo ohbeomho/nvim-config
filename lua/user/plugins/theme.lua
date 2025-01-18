@@ -15,7 +15,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "dracula",
+        theme = "onedark",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       },
