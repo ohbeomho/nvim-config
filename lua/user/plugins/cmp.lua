@@ -20,8 +20,7 @@ return {
       -- see the "default configuration" section below for full documentation on how to define
       -- your own keymap.
       keymap = {
-        preset = "none",
-        ["<Enter>"] = { "accept", "fallback" },
+        ["<C-y>"] = { "accept", "fallback" },
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-j>"] = { "select_next", "fallback" },
         ["<C-k>"] = { "select_prev", "fallback" },
@@ -49,6 +48,12 @@ return {
       },
 
       completion = {
+        list = {
+          selection = {
+            preselect = true,
+            auto_select = false,
+          }
+        }
         keyword = { range = "prefix" },
         documentation = { auto_show = true },
       },
