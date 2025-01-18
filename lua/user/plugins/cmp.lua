@@ -52,8 +52,8 @@ return {
           selection = {
             preselect = true,
             auto_select = false,
-          }
-        }
+          },
+        },
         keyword = { range = "prefix" },
         documentation = { auto_show = true },
       },
