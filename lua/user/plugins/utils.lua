@@ -93,8 +93,10 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
-      modes = { "n", "no", "c" },
-      hybrid_modes = { "n" },
+      preview = {
+        modes = { "n", "no", "c" },
+        hybrid_modes = { "n" },
+      },
     },
   },
   {
@@ -115,7 +117,7 @@ return {
   "hood/popui.nvim",
   {
     "rachartier/tiny-glimmer.nvim",
-    event = "TextYankPost",
+    event = "VeryLazy",
     opts = {},
   },
 }
