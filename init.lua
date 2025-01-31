@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 require("core.lazy")
 require("core.mappings")
 require("user.neovide")
+require("user.terminal")
 
 -- Enable persistent undo
 vim.o.undofile = true
