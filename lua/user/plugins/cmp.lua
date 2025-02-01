@@ -20,7 +20,7 @@ return {
       -- see the "default configuration" section below for full documentation on how to define
       -- your own keymap.
       keymap = {
-        ["<C-y>"] = { "accept", "fallback" },
+        ["<Tab>"] = { "accept", "fallback" },
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-j>"] = { "select_next", "fallback" },
         ["<C-k>"] = { "select_prev", "fallback" },
@@ -56,6 +56,9 @@ return {
         },
         keyword = { range = "prefix" },
         documentation = { auto_show = true },
+        ghost_text = {
+          enabled = true,
+        },
       },
 
       -- experimental signature help support
