@@ -51,14 +51,11 @@ return {
         list = {
           selection = {
             preselect = true,
-            auto_insert = false,
+            auto_insert = true,
           },
         },
         keyword = { range = "prefix" },
         documentation = { auto_show = true },
-        ghost_text = {
-          enabled = true,
-        },
       },
 
       -- experimental signature help support
