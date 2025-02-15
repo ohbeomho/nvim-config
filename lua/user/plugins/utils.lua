@@ -11,7 +11,12 @@ return {
   {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = true,
+    opts = {
+      files = {
+        no_ignore = true,
+        previewer = "bat",
+      },
+    },
   },
   { "wakatime/vim-wakatime", lazy = false },
   {
