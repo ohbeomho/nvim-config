@@ -28,11 +28,6 @@ vim.keymap.set("n", "<C-w>=", "<cmd>WindowsEqualize<cr>")
 -- Marks
 vim.keymap.set("n", "<leader>dm", "<cmd>delm! | delm A-Z0-9<cr>")
 
--- Spider
-vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
-vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
-vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-
 -- Popui
 vim.api.nvim_set_keymap(
   "n",

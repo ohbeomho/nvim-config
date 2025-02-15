@@ -107,12 +107,6 @@ return {
       },
     },
   },
-  {
-    "chrisgrieser/nvim-spider",
-    opts = {
-      skipInsignificantPunctuation = false,
-    },
-  },
   "hood/popui.nvim",
   {
     "rachartier/tiny-glimmer.nvim",
