@@ -52,14 +52,6 @@ return {
     },
   },
   {
-    "jinh0/eyeliner.nvim",
-    opts = {
-      highlight_on_key = true,
-      dim = true,
-      max_length = 300,
-    },
-  },
-  {
     "karb94/neoscroll.nvim",
     opts = {
       duration_multiplier = 0.5,
