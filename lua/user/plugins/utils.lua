@@ -36,7 +36,9 @@ return {
     opts = {
       modes = {
         char = {
-          enabled = false,
+          highlight = { backdrop = false },
+          multi_line = false,
+          jump_labels = true,
         },
       },
     },
