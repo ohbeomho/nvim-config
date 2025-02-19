@@ -1,37 +1,37 @@
 return {
-  "mateuszwieloch/automkdir.nvim",
+  'mateuszwieloch/automkdir.nvim',
   {
-    "kylechui/nvim-surround",
-    version = "*",
-    event = "VeryLazy",
+    'kylechui/nvim-surround',
+    version = '*',
+    event = 'VeryLazy',
     config = function()
-      require("nvim-surround").setup()
+      require('nvim-surround').setup()
     end,
   },
   {
-    "ibhagwan/fzf-lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    'ibhagwan/fzf-lua',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
       files = {
         no_ignore = true,
-        previewer = "bat",
+        previewer = 'bat',
       },
     },
   },
-  { "wakatime/vim-wakatime", lazy = false },
+  { 'wakatime/vim-wakatime', lazy = false },
   {
-    "anuvyklack/windows.nvim",
-    dependencies = { "anuvyklack/middleclass" },
+    'anuvyklack/windows.nvim',
+    dependencies = { 'anuvyklack/middleclass' },
     config = true,
   },
   {
-    "notjedi/nvim-rooter.lua",
+    'notjedi/nvim-rooter.lua',
     lazy = false,
     config = true,
   },
   {
-    "folke/flash.nvim",
-    event = "VeryLazy",
+    'folke/flash.nvim',
+    event = 'VeryLazy',
     ---@type Flash.Config
     opts = {
       modes = {
@@ -52,13 +52,13 @@ return {
     },
   },
   {
-    "karb94/neoscroll.nvim",
+    'karb94/neoscroll.nvim',
     opts = {
       duration_multiplier = 0.5,
     },
   },
   {
-    "stevearc/oil.nvim",
+    'stevearc/oil.nvim',
     ---@module 'oil'
     ---@type oil.SetupOpts
     opts = {
@@ -69,18 +69,18 @@ return {
     },
     -- Optional dependencies
     -- dependencies = { { "echasnovski/mini.icons", opts = {} } },
-    dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+    dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if prefer nvim-web-devicons
   },
   {
-    "altermo/ultimate-autopair.nvim",
-    event = { "InsertEnter", "CmdlineEnter" },
-    branch = "v0.6", --recommended as each new version will have breaking changes
+    'altermo/ultimate-autopair.nvim',
+    event = { 'InsertEnter', 'CmdlineEnter' },
+    branch = 'v0.6', --recommended as each new version will have breaking changes
     opts = {
       --Config goes here
     },
   },
   {
-    "OXY2DEV/markview.nvim",
+    'OXY2DEV/markview.nvim',
     lazy = false, -- Recommended
     -- ft = "markdown" -- If you decide to lazy-load anyway
 
@@ -88,29 +88,60 @@ return {
       -- You will not need this if you installed the
       -- parsers manually
       -- Or if the parsers are in your $RUNTIMEPATH
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
     },
     opts = {
       preview = {
-        modes = { "n", "no", "c" },
-        hybrid_modes = { "n" },
+        modes = { 'n', 'no', 'c' },
+        hybrid_modes = { 'n' },
       },
     },
   },
   {
-    "LunarVim/bigfile.nvim",
+    'LunarVim/bigfile.nvim',
     opts = {
       features = {
-        "lsp",
-        "treesitter",
+        'lsp',
+        'treesitter',
       },
     },
   },
-  "hood/popui.nvim",
+  'hood/popui.nvim',
   {
-    "rachartier/tiny-glimmer.nvim",
-    event = "VeryLazy",
+    'rachartier/tiny-glimmer.nvim',
+    event = 'VeryLazy',
     opts = {},
+  },
+  {
+    'bassamsdata/namu.nvim',
+    config = function()
+      require('namu').setup({
+        -- Enable the modules you want
+        namu_symbols = {
+          enable = true,
+          options = {}, -- here you can configure namu
+        },
+        -- Optional: Enable other modules if needed
+        ui_select = { enable = false }, -- vim.ui.select() wrapper
+        colorscheme = {
+          enable = false,
+          options = {
+            -- NOTE: if you activate persist, then please remove any vim.cmd("colorscheme ...") in your config, no needed anymore
+            persist = true,      -- very efficient mechanism to Remember selected colorscheme
+            write_shada = false, -- If you open multiple nvim instances, then probably you need to enable this
+          },
+        },
+      })
+      -- === Suggested Keymaps: ===
+      vim.keymap.set('n', '<leader>ss', ':Namu symbols<cr>', {
+        desc = 'Jump to LSP symbol',
+        silent = true,
+      })
+      vim.keymap.set('n', '<leader>th', ':Namu colorscheme<cr>', {
+        desc = 'Colorscheme Picker',
+        silent = true,
+      })
+    end,
   },
 }

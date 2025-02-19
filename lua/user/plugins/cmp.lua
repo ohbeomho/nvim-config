@@ -1,11 +1,11 @@
 return {
   {
-    "saghen/blink.cmp",
+    'saghen/blink.cmp',
     -- optional: provides snippets for the snippet source
-    dependencies = "rafamadriz/friendly-snippets",
+    dependencies = 'rafamadriz/friendly-snippets',
 
     -- use a release tag to download pre-built binaries
-    version = "v0.*",
+    version = 'v0.*',
     -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
     -- build = 'cargo build --release',
     -- If you use nix, you can build from source using latest nightly rust with:
@@ -20,13 +20,13 @@ return {
       -- see the "default configuration" section below for full documentation on how to define
       -- your own keymap.
       keymap = {
-        ["<Tab>"] = { "accept", "fallback" },
-        ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
-        ["<C-j>"] = { "select_next", "fallback" },
-        ["<C-k>"] = { "select_prev", "fallback" },
-        ["<C-e>"] = { "cancel", "hide", "fallback" },
-        ["<C-n>"] = { "snippet_forward", "fallback" },
-        ["<C-p>"] = { "snippet_backward", "fallback" },
+        ['<Tab>'] = { 'accept', 'fallback' },
+        ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-j>'] = { 'select_next', 'fallback' },
+        ['<C-k>'] = { 'select_prev', 'fallback' },
+        ['<C-e>'] = { 'cancel', 'hide', 'fallback' },
+        ['<C-n>'] = { 'snippet_forward', 'fallback' },
+        ['<C-p>'] = { 'snippet_backward', 'fallback' },
       },
 
       appearance = {
@@ -36,13 +36,13 @@ return {
         use_nvim_cmp_as_default = true,
         -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
         -- Adjusts spacing to ensure icons are aligned
-        nerd_font_variant = "mono",
+        nerd_font_variant = 'mono',
       },
 
       -- default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, via `opts_extend`
       sources = {
-        default = { "snippets", "lsp", "path", "buffer" },
+        default = { 'snippets', 'lsp', 'path', 'buffer' },
         -- optionally disable cmdline completions
         -- cmdline = {},
       },
@@ -54,7 +54,7 @@ return {
             auto_insert = true,
           },
         },
-        keyword = { range = "prefix" },
+        keyword = { range = 'prefix' },
         documentation = { auto_show = true },
       },
 
@@ -63,6 +63,6 @@ return {
     },
     -- allows extending the providers array elsewhere in your config
     -- without having to redefine it
-    opts_extend = { "sources.default" },
+    opts_extend = { 'sources.default' },
   },
 }

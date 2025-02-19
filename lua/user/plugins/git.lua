@@ -1,10 +1,10 @@
 return {
   {
-    "lewis6991/gitsigns.nvim",
+    'lewis6991/gitsigns.nvim',
     config = function()
-      require("gitsigns").setup({
+      require('gitsigns').setup({
         on_attach = function(bufnr)
-          local gitsigns = require("gitsigns")
+          local gitsigns = require('gitsigns')
 
           local function map(mode, l, r, opts)
             opts = opts or {}
@@ -13,19 +13,19 @@ return {
           end
 
           -- Navigation
-          map("n", "]g", function()
+          map('n', ']g', function()
             if vim.wo.diff then
-              vim.cmd.normal({ "]c", bang = true })
+              vim.cmd.normal({ ']c', bang = true })
             else
-              gitsigns.nav_hunk("next")
+              gitsigns.nav_hunk('next')
             end
           end)
 
-          map("n", "[g", function()
+          map('n', '[g', function()
             if vim.wo.diff then
-              vim.cmd.normal({ "[c", bang = true })
+              vim.cmd.normal({ '[c', bang = true })
             else
-              gitsigns.nav_hunk("prev")
+              gitsigns.nav_hunk('prev')
             end
           end)
         end,
