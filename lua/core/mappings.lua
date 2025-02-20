@@ -28,26 +28,6 @@ vim.keymap.set('n', '<C-w>=', '<cmd>WindowsEqualize<cr>')
 -- Marks
 vim.keymap.set('n', '<leader>dm', '<cmd>delm! | delm A-Z0-9<cr>')
 
--- Popui
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader><leader>d',
-  ':lua require"popui.diagnostics-navigator"()<CR>',
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader><leader>m',
-  ':lua require"popui.marks-manager"()<CR>',
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader><leader>r',
-  ':lua require"popui.references-navigator"()<CR>',
-  { noremap = true, silent = true }
-)
-
 -- Others
 vim.keymap.set('n', '*', '<cmd>keepjumps normal! mi*`i<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>')

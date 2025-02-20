@@ -28,10 +28,6 @@ vim.opt.termguicolors = true
 -- Always show tabline
 vim.opt.showtabline = 2
 
--- popui
-vim.ui.select = require('popui.ui-overrider')
-vim.ui.input = require('popui.input-overrider')
-
 vim.cmd('language en_US.utf8')
 
 local autocmd = vim.api.nvim_create_autocmd
