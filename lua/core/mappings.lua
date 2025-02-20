@@ -18,6 +18,8 @@ local fzflua = require('fzf-lua')
 vim.keymap.set('n', '<leader>ff', fzflua.files)
 vim.keymap.set('n', '<leader>fg', fzflua.live_grep)
 vim.keymap.set('n', '<leader>fb', fzflua.buffers)
+vim.keymap.set('n', '<leader>fr', fzflua.resume)
+vim.keymap.set('n', '<leader>fd', fzflua.lsp_definitions)
 
 -- Windows
 vim.keymap.set('n', '<C-w>z', '<cmd>WindowsMaximize<cr>')
