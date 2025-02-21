@@ -57,4 +57,5 @@ return {
     },
     config = true,
   },
+  'tpope/vim-fugitive',
 }
