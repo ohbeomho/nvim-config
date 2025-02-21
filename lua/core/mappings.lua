@@ -20,6 +20,7 @@ vim.keymap.set('n', '<leader>fg', fzflua.live_grep)
 vim.keymap.set('n', '<leader>fb', fzflua.buffers)
 vim.keymap.set('n', '<leader>fr', fzflua.resume)
 vim.keymap.set('n', '<leader>fd', fzflua.lsp_definitions)
+vim.keymap.set('n', '<leader>gs', fzflua.git_status)
 
 -- Windows
 vim.keymap.set('n', '<C-w>z', '<cmd>WindowsMaximize<cr>')
