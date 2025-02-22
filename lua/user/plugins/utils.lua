@@ -16,7 +16,15 @@ return {
       fzflua.setup({
         files = {
           no_ignore = true,
+        },
+        diagnostics = {
           previewer = 'bat',
+        },
+        previewers = {
+          bat = {
+            cmd = 'bat',
+            args = '--color=always --style=numbers,changes',
+          },
         },
       })
       fzflua.register_ui_select()
