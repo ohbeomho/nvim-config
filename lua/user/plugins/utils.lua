@@ -17,7 +17,7 @@ return {
         files = {
           no_ignore = true,
         },
-        diagnostics = {
+        defaults = {
           previewer = 'bat',
         },
         previewers = {
