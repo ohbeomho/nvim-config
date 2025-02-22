@@ -11,12 +11,16 @@ return {
   {
     'ibhagwan/fzf-lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    opts = {
-      files = {
-        no_ignore = true,
-        previewer = 'bat',
-      },
-    },
+    config = function()
+      local fzflua = require('fzf-lua')
+      fzflua.setup({
+        files = {
+          no_ignore = true,
+          previewer = 'bat',
+        },
+      })
+      fzflua.register_ui_select()
+    end,
   },
   { 'wakatime/vim-wakatime', lazy = false },
   {
