@@ -33,7 +33,7 @@ return {
   { 'wakatime/vim-wakatime', lazy = false },
   {
     'anuvyklack/windows.nvim',
-    dependencies = { 'anuvyklack/middleclass' },
+    dependencies = { 'anuvyklack/middleclass', 'anuvyklack/animation.nvim' },
     config = true,
   },
   {
