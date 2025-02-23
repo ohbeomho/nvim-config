@@ -10,7 +10,6 @@ vim.o.undofile = true
 
 -- Disable mouse
 vim.opt.mouse = ''
--- Always block cursor
 vim.opt.guicursor = 'n-v-c:block,i:ver20'
 -- Line numbers (Relative)
 vim.opt.number = true
@@ -31,7 +30,6 @@ vim.opt.showtabline = 2
 vim.cmd('language en_US.utf8')
 
 local autocmd = vim.api.nvim_create_autocmd
-local augroup = vim.api.nvim_create_augroup
 
 -- Set file type to html when ejs file open
 -- to use html highlighting
