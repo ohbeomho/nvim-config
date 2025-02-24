@@ -124,4 +124,13 @@ return {
     event = 'VeryLazy',
     opts = {},
   },
+  {
+    'MagicDuck/grug-far.nvim',
+    config = function()
+      require('grug-far').setup({
+        startInInsertMode = false,
+        windowCreationCommand = 'tab split',
+      })
+    end,
+  },
 }
