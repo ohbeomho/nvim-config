@@ -111,15 +111,6 @@ return {
     },
   },
   {
-    'LunarVim/bigfile.nvim',
-    opts = {
-      features = {
-        'lsp',
-        'treesitter',
-      },
-    },
-  },
-  {
     'rachartier/tiny-glimmer.nvim',
     event = 'VeryLazy',
     opts = {},
