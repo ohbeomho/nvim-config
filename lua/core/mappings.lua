@@ -55,6 +55,7 @@ function Highlight_selection()
 
   local line = vim.fn.getline('.')
   local selection = string.sub(line, vstart[3], vend[3])
+  selection = selection:gsub('([' .. string.gsub('^$()%.[]*+-?', '(.)', '%%1') .. '])', '\\%1')
   vim.cmd('/' .. selection)
   vim.api.nvim_feedkeys('N', 'n', true)
 end
