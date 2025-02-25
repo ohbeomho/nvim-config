@@ -111,11 +111,6 @@ return {
     },
   },
   {
-    'rachartier/tiny-glimmer.nvim',
-    event = 'VeryLazy',
-    opts = {},
-  },
-  {
     'MagicDuck/grug-far.nvim',
     config = function()
       require('grug-far').setup({
