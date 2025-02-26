@@ -1,11 +1,5 @@
 return {
   {
-    'navarasu/onedark.nvim',
-    config = function()
-      require('onedark').load()
-    end,
-  },
-  {
     'folke/todo-comments.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = true,
@@ -15,7 +9,7 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
       options = {
-        theme = 'onedark',
+        theme = 'auto',
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
       },
