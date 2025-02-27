@@ -54,6 +54,18 @@ return {
 
       -- experimental signature help support
       signature = { enabled = true },
+
+      cmdline = {
+        completion = {
+          menu = {
+            auto_show = true,
+          },
+        },
+
+        keymap = {
+          preset = 'super-tab',
+        },
+      },
     },
     -- allows extending the providers array elsewhere in your config
     -- without having to redefine it
