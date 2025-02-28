@@ -8,8 +8,8 @@ vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover)
 
 -- Tabs
 vim.keymap.set('n', '<tab>e', '<cmd>tabe<cr>')
-vim.keymap.set('n', '<tab>n', '<cmd>tabn<cr>')
-vim.keymap.set('n', '<tab>p', '<cmd>tabp<cr>')
+vim.keymap.set('n', 'J', '<cmd>tabn<cr>')
+vim.keymap.set('n', 'K', '<cmd>tabp<cr>')
 vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 
 -- fzf-lua
