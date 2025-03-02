@@ -27,7 +27,6 @@ return {
           },
         },
       })
-      fzflua.register_ui_select()
     end,
   },
   { 'wakatime/vim-wakatime', lazy = false },
