@@ -4,7 +4,8 @@ vim.keymap.set('n', '<leader>e', oil.toggle_float)
 
 -- LSP
 vim.keymap.set('n', '<f2>', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover)
+vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
+vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action)
 
 -- Tabs
 vim.keymap.set('n', '<tab>e', '<cmd>tabe<cr>')
@@ -25,7 +26,6 @@ vim.keymap.set('n', '<leader>gb', fzflua.git_branches)
 
 vim.keymap.set('n', '<leader>ld', fzflua.lsp_definitions)
 vim.keymap.set('n', '<leader>li', fzflua.lsp_document_diagnostics)
-vim.keymap.set('n', '<leader>lc', fzflua.lsp_code_actions)
 
 -- Windows
 vim.keymap.set('n', '<C-w>z', '<cmd>WindowsMaximize<cr>')
