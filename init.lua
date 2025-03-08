@@ -12,9 +12,8 @@ vim.o.undofile = true
 -- Disable mouse
 vim.opt.mouse = ''
 vim.opt.guicursor = 'n-v-c:block,i:ver20'
--- Line numbers (Relative)
+-- Line numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
 -- Indent
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
