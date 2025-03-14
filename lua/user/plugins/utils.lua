@@ -45,6 +45,16 @@ return {
     dependencies = { 'tpope/vim-repeat' },
   },
   {
+    'ggandor/flit.nvim',
+    dependencies = {
+      'tpope/vim-repeat',
+      'ggandor/leap.nvim',
+    },
+    opts = {
+      multiline = false,
+    },
+  },
+  {
     'karb94/neoscroll.nvim',
     opts = {
       duration_multiplier = 0.5,
