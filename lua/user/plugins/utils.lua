@@ -9,25 +9,13 @@ return {
     end,
   },
   {
-    'ibhagwan/fzf-lua',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      local fzflua = require('fzf-lua')
-      fzflua.setup({
-        files = {
-          no_ignore = true,
-        },
-        diagnostics = {
-          previewer = 'bat',
-        },
-        previewers = {
-          bat = {
-            cmd = 'bat',
-            args = '--color=always --style=numbers,changes',
-          },
-        },
-      })
-    end,
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.8',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'BurntSushi/ripgrep',
+    },
+    opts = {},
   },
   { 'wakatime/vim-wakatime', lazy = false },
   {

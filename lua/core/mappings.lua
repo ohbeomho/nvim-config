@@ -13,19 +13,20 @@ vim.keymap.set('n', 'J', '<cmd>tabn<cr>')
 vim.keymap.set('n', 'K', '<cmd>tabp<cr>')
 vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 
--- fzf-lua
-local fzflua = require('fzf-lua')
-vim.keymap.set('n', '<leader>ff', fzflua.files)
-vim.keymap.set('n', '<leader>fg', fzflua.live_grep)
-vim.keymap.set('n', '<leader>fb', fzflua.buffers)
-vim.keymap.set('n', '<leader>fr', fzflua.resume)
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep)
+vim.keymap.set('n', '<leader>fb', builtin.buffers)
+vim.keymap.set('n', '<leader>fr', builtin.resume)
 
-vim.keymap.set('n', '<leader>gs', fzflua.git_status)
-vim.keymap.set('n', '<leader>gc', fzflua.git_commits)
-vim.keymap.set('n', '<leader>gb', fzflua.git_branches)
+vim.keymap.set('n', '<leader>gs', builtin.git_status)
+vim.keymap.set('n', '<leader>gc', builtin.git_commits)
+vim.keymap.set('n', '<leader>gb', builtin.git_branches)
 
-vim.keymap.set('n', '<leader>ld', fzflua.lsp_definitions)
-vim.keymap.set('n', '<leader>li', fzflua.lsp_document_diagnostics)
+vim.keymap.set('n', '<leader>le', builtin.lsp_definitions)
+vim.keymap.set('n', '<leader>li', builtin.lsp_implementations)
+vim.keymap.set('n', '<leader>ld', builtin.diagnostics)
 
 -- Windows
 vim.keymap.set('n', '<C-w>z', '<cmd>WindowsMaximize<cr>')
