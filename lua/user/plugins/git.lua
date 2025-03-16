@@ -28,6 +28,9 @@ return {
               gitsigns.nav_hunk('prev')
             end
           end)
+
+          map('n', '[s', gitsigns.stage_hunk)
+          map('n', '[r', gitsigns.reset_hunk)
         end,
       })
     end,
