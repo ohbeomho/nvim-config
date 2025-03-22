@@ -1,10 +1,6 @@
 return {
   'mateuszwieloch/automkdir.nvim',
   {
-    'Pocco81/auto-save.nvim',
-    config = true,
-  },
-  {
     'kylechui/nvim-surround',
     version = '*',
     event = 'VeryLazy',
