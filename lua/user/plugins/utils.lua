@@ -115,4 +115,11 @@ return {
       })
     end,
   },
+  {
+    'arnamak/stay-centered.nvim',
+    lazy = false,
+    config = function()
+      require('stay-centered').enable()
+    end,
+  },
 }
