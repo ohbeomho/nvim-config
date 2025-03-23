@@ -36,8 +36,8 @@ local autocmd = vim.api.nvim_create_autocmd
 -- Set file type to html when ejs file open
 -- to use html highlighting
 autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = '*.ejs',
-  callback = function()
-    vim.bo.filetype = 'html'
-  end,
+	pattern = '*.ejs',
+	callback = function()
+		vim.bo.filetype = 'html'
+	end,
 })

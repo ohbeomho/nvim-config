@@ -16,7 +16,7 @@ vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', function()
-  builtin.find_files({ no_ignore = true })
+	builtin.find_files({ no_ignore = true })
 end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fb', builtin.buffers)
@@ -47,20 +47,20 @@ vim.keymap.set('n', '*', '<cmd>keepjumps normal! mi*`i<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>')
 
 function Highlight_selection()
-  local vstart = vim.fn.getpos("'<")
-  local vend = vim.fn.getpos("'>")
-  local line_start = vstart[2]
-  local line_end = vend[2]
+	local vstart = vim.fn.getpos("'<")
+	local vend = vim.fn.getpos("'>")
+	local line_start = vstart[2]
+	local line_end = vend[2]
 
-  if line_start ~= line_end then
-    return
-  end
+	if line_start ~= line_end then
+		return
+	end
 
-  local line = vim.fn.getline('.')
-  local selection = string.sub(line, vstart[3], vend[3])
-  selection = selection:gsub('([' .. string.gsub('^$()%.[]*+-?', '(.)', '%%1') .. '])', '\\%1')
-  vim.cmd('/' .. selection)
-  vim.api.nvim_feedkeys('N', 'n', true)
+	local line = vim.fn.getline('.')
+	local selection = string.sub(line, vstart[3], vend[3])
+	selection = selection:gsub('([' .. string.gsub('^$()%.[]*+-?', '(.)', '%%1') .. '])', '\\%1')
+	vim.cmd('/' .. selection)
+	vim.api.nvim_feedkeys('N', 'n', true)
 end
 
 vim.keymap.set('x', '*', ':lua Highlight_selection()<cr>')
