@@ -36,6 +36,10 @@ return {
 			modes = {
 				char = {
 					jump_labels = true,
+					highlight = {
+						backdrop = false,
+					},
+					multi_line = false,
 				},
 			},
 		},
