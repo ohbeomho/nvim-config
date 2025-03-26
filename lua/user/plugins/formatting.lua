@@ -7,6 +7,8 @@ return {
 					lua = { 'stylua' },
 					python = { 'black' },
 					javascript = { 'prettierd' },
+					html = { 'prettierd' },
+					css = { 'prettierd' },
 					cpp = { 'clang-format' },
 					c = { 'clang-format' },
 				},
