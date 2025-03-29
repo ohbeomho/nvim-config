@@ -1,6 +1,12 @@
 -- Oil
 local oil = require('oil')
-vim.keymap.set('n', '<leader>e', oil.toggle_float)
+vim.keymap.set('n', '<leader>e', function()
+	if vim.bo.filetype == 'oil' then
+		oil.close()
+	else
+		oil.open()
+	end
+end)
 
 -- LSP
 vim.keymap.set('n', '<f2>', vim.lsp.buf.rename)
