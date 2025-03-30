@@ -14,22 +14,22 @@ return {
 			require('mason-lspconfig').setup_handlers({
 				function(server_name)
 					local capabilities = require('blink.cmp').get_lsp_capabilities()
+					require('lspconfig')[server_name].setup({ capabilities = capabilities })
+				end,
+				['clangd'] = function()
+					local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-					if server_name == 'clangd' then
-						require('lspconfig')[server_name].setup({
-							capabilities = capabilities,
-							on_attach = function(client)
-								client.server_capabilities.documentFormattingProvider = false
-								client.server_capabilities.documentRangeFormattingProvider = false
-							end,
-							cmd = {
-								'clangd',
-								'--offset-encoding=utf-16',
-							},
-						})
-					else
-						require('lspconfig')[server_name].setup({ capabilities = capabilities })
-					end
+					require('lspconfig').clangd.setup({
+						capabilities = capabilities,
+						on_attach = function(client)
+							client.server_capabilities.documentFormattingProvider = false
+							client.server_capabilities.documentRangeFormattingProvider = false
+						end,
+						cmd = {
+							'clangd',
+							'--offset-encoding=utf-16',
+						},
+					})
 				end,
 			})
 		end,
