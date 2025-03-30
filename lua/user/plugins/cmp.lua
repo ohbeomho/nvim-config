@@ -67,8 +67,7 @@ return {
 
 			-- experimental signature help support
 			signature = {
-				enabled = true,
-				trigger = { show_on_insert = true },
+				enabled = false,
 			},
 
 			cmdline = {
