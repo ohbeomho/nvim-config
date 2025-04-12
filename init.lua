@@ -29,7 +29,6 @@ vim.opt.termguicolors = true
 vim.opt.showtabline = 2
 
 vim.cmd('language en_US.utf8')
-vim.cmd('colorscheme retrobox')
 
 local autocmd = vim.api.nvim_create_autocmd
 

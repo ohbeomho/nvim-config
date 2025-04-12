@@ -1,5 +1,15 @@
 return {
 	{
+		'sainnhe/sonokai',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.sonokai_enable_italic = true
+			vim.g.sonokai_style = 'andromeda'
+			vim.cmd.colorscheme('sonokai')
+		end,
+	},
+	{
 		'folke/todo-comments.nvim',
 		dependencies = { 'nvim-lua/plenary.nvim' },
 		config = true,
