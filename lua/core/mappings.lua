@@ -32,10 +32,6 @@ vim.keymap.set('n', '<leader>gs', builtin.git_status)
 vim.keymap.set('n', '<leader>gc', builtin.git_commits)
 vim.keymap.set('n', '<leader>gb', builtin.git_branches)
 
-vim.keymap.set('n', '<leader>le', builtin.lsp_definitions)
-vim.keymap.set('n', '<leader>li', builtin.lsp_implementations)
-vim.keymap.set('n', '<leader>ld', builtin.diagnostics)
-
 -- Windows
 vim.keymap.set('n', '<C-w>z', '<cmd>WindowsMaximize<cr>')
 vim.keymap.set('n', '<C-w>|', '<cmd>WindowsMaximizeVertically<cr>')
