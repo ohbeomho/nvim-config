@@ -15,7 +15,13 @@ return {
 			'nvim-lua/plenary.nvim',
 			'BurntSushi/ripgrep',
 		},
-		opts = {},
+		opts = {
+			pickers = {
+				colorscheme = {
+					enable_preview = true,
+				},
+			},
+		},
 	},
 	{ 'wakatime/vim-wakatime', lazy = false },
 	{
