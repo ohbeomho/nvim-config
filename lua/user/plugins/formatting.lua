@@ -12,6 +12,11 @@ return {
 					cpp = { 'clang-format' },
 					c = { 'clang-format' },
 				},
+				formatters = {
+					clang_format = {
+						args = { "-style='{IndentWidth: 4}'" },
+					},
+				},
 				format_on_save = {
 					timeout_ms = 500,
 					lsp_format = 'fallback',
