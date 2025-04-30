@@ -1,23 +1,11 @@
 -- Oil
 local oil = require('oil')
-vim.keymap.set('n', '<leader>e', function()
-	if vim.bo.filetype == 'oil' then
-		oil.close()
-	else
-		oil.open()
-	end
-end)
+vim.keymap.set('n', '<leader>e', oil.open_float)
 
 -- LSP
 vim.keymap.set('n', '<f2>', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
 vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action)
-
--- Tabs
-vim.keymap.set('n', '<tab>e', '<cmd>tabe<cr>')
-vim.keymap.set('n', '<tab>n', '<cmd>tabn<cr>')
-vim.keymap.set('n', '<tab>p', '<cmd>tabp<cr>')
-vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -65,4 +53,4 @@ function Highlight_selection()
 	vim.api.nvim_feedkeys('N', 'n', true)
 end
 
-vim.keymap.set('x', '*', ':lua Highlight_selection()<cr>')
+vim.keymap.set('x', '*', '<cmd>lua Highlight_selection()<cr>')
