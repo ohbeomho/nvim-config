@@ -25,8 +25,6 @@ vim.opt.smartindent = true
 -- Case insensitive when searching
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
--- Always show tabline
-vim.opt.showtabline = 2
 
 vim.cmd('language en_US.utf8')
 
@@ -38,5 +36,22 @@ autocmd({ 'BufNewFile', 'BufRead' }, {
 	pattern = '*.ejs',
 	callback = function()
 		vim.bo.filetype = 'html'
+	end,
+})
+
+-- Shift numbered registers up (1 becomes 2, 2 becomes 3, etc.)
+-- Thanks to u/PieceAdventurous on reddit!
+local function yank_shift()
+	for i = 9, 1, -1 do
+		vim.fn.setreg(tostring(i), vim.fn.getreg(tostring(i - 1)))
+	end
+end
+
+autocmd('TextYankPost', {
+	callback = function()
+		local event = vim.v.event
+		if event.operator == 'y' then
+			yank_shift()
+		end
 	end,
 })
