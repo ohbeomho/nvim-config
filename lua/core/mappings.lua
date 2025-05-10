@@ -32,10 +32,6 @@ vim.keymap.set('n', '<leader>dm', '<cmd>delm! | delm A-Z0-9<cr>')
 -- Leap
 vim.keymap.set({ 'n', 'x' }, 's', '<Plug>(leap)')
 
--- Buffers
-vim.keymap.set('n', 'bn', '<cmd>bn<cr>')
-vim.keymap.set('n', 'bp', '<cmd>bp<cr>')
-
 -- Others
 vim.keymap.set('n', '*', '<cmd>keepjumps normal! mi*`i<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>')
