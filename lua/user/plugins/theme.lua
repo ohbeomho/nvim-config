@@ -27,4 +27,9 @@ return {
 			require('nvim-highlight-colors').setup({})
 		end,
 	},
+	{
+		'alvarosevilla95/luatab.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+		opts = {},
+	},
 }
