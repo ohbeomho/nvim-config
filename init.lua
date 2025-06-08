@@ -25,6 +25,8 @@ vim.opt.smartindent = true
 -- Case insensitive when searching
 vim.opt.ignorecase = true
 vim.opt.termguicolors = true
+-- Always show tabline
+vim.o.showtabline = 2
 
 vim.cmd('language en_US.utf8')
 
