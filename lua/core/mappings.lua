@@ -29,6 +29,10 @@ vim.keymap.set('n', '<C-w>=', '<cmd>WindowsEqualize<cr>')
 -- Marks
 vim.keymap.set('n', '<leader>dm', '<cmd>delm! | delm A-Z0-9<cr>')
 
+-- Tabs
+vim.keymap.set('n', '<tab>n', '<cmd>tabn<cr>')
+vim.keymap.set('n', '<tab>p', '<cmd>tabp<cr>')
+vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 
 -- Others
 vim.keymap.set('n', '*', '<cmd>keepjumps normal! mi*`i<cr>')
