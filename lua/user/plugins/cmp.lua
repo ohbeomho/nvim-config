@@ -67,7 +67,7 @@ return {
 
 			-- experimental signature help support
 			signature = {
-				enabled = false,
+				enabled = true,
 			},
 
 			cmdline = {
