@@ -34,6 +34,9 @@ vim.keymap.set('n', '<tab>n', '<cmd>tabn<cr>')
 vim.keymap.set('n', '<tab>p', '<cmd>tabp<cr>')
 vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 
+-- Undotree
+vim.keymap.set('n', '<leader>u', require('undotree').toggle)
+
 -- Others
 vim.keymap.set('n', '*', '<cmd>keepjumps normal! mi*`i<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>nohl<cr>')
