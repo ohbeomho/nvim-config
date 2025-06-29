@@ -91,33 +91,6 @@ return {
 		end,
 	},
 	{
-		'folke/trouble.nvim',
-		opts = {},
-		cmd = 'Trouble',
-		keys = {
-			{
-				'<leader>xx',
-				'<cmd>Trouble diagnostics toggle filter.buf=0 focus=true<cr>',
-				desc = 'Buffer Diagnostics (Trouble)',
-			},
-			{
-				'<leader>xX',
-				'<cmd>Trouble diagnostics toggle focus=true<cr>',
-				desc = 'Diagnostics (Trouble)',
-			},
-			{
-				'<leader>xl',
-				'<cmd>Trouble lsp toggle win.position=left focus=true<cr>',
-				desc = 'LSP Definitions / References / ... (Trouble)',
-			},
-			{
-				'<leader>xs',
-				'<cmd>Trouble symbols toggle win.position=left focus=true<cr>',
-				desc = 'Symbols (Trouble)',
-			},
-		},
-	},
-	{
 		'jiaoshijie/undotree',
 		dependencies = 'nvim-lua/plenary.nvim',
 		config = true,
