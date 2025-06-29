@@ -2,11 +2,6 @@
 local oil = require('oil')
 vim.keymap.set('n', '<leader>e', oil.open_float)
 
--- LSP
-vim.keymap.set('n', '<f2>', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
-vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action)
-
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', function()
@@ -36,6 +31,14 @@ vim.keymap.set('n', '<tab>x', '<cmd>tabc<cr>')
 
 -- Undotree
 vim.keymap.set('n', '<leader>u', require('undotree').toggle)
+
+-- Lspsaga
+vim.keymap.set('n', 'gd', '<cmd>Lspsaga goto_definition<cr>')
+vim.keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<cr>')
+vim.keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<cr>')
+vim.keymap.set('n', '<f2>', '<cmd>Lspsaga rename<cr>')
+vim.keymap.set('n', '<leader>c', '<cmd>Lspsaga code_action<cr>')
+vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<cr>')
 
 -- Others
 vim.keymap.set('n', '*', '<cmd>keepjumps normal! mi*`i<cr>')
