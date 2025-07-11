@@ -15,6 +15,8 @@ vim.opt.guicursor = 'n-v-c:block,i:ver20'
 -- Line numbers
 vim.opt.number = true
 vim.wo.relativenumber = true
+-- Disable line break
+vim.opt.wrap = false
 -- Indent
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
