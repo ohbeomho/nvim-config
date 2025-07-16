@@ -30,6 +30,8 @@ vim.opt.termguicolors = true
 -- Always show tabline
 vim.o.showtabline = 2
 
+vim.diagnostic.config({ virtual_lines = true })
+
 vim.cmd('language en_US.utf8')
 
 local autocmd = vim.api.nvim_create_autocmd
