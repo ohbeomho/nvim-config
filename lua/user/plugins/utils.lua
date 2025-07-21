@@ -23,7 +23,6 @@ return {
 			},
 		},
 	},
-	{ 'wakatime/vim-wakatime', lazy = false },
 	{
 		'anuvyklack/windows.nvim',
 		dependencies = { 'anuvyklack/middleclass', 'anuvyklack/animation.nvim' },
@@ -63,26 +62,6 @@ return {
 		},
 	},
 	{
-		'OXY2DEV/markview.nvim',
-		lazy = false, -- Recommended
-		-- ft = "markdown" -- If you decide to lazy-load anyway
-		priority = 49,
-
-		dependencies = {
-			-- You will not need this if you installed the
-			-- parsers manually
-			-- Or if the parsers are in your $RUNTIMEPATH
-			'nvim-treesitter/nvim-treesitter',
-			'nvim-tree/nvim-web-devicons',
-		},
-		opts = {
-			preview = {
-				modes = { 'n', 'no', 'c' },
-				hybrid_modes = { 'n' },
-			},
-		},
-	},
-	{
 		'MagicDuck/grug-far.nvim',
 		config = function()
 			require('grug-far').setup({
@@ -105,6 +84,7 @@ return {
 			---@module "fFtT-highlights"
 			---@type fFtT_highlights.opts
 			require('fFtT-highlights'):setup({
+
 				---See below for default configuration options
 			})
 		end,

@@ -25,8 +25,4 @@ return {
 		dependencies = { 'nvim-treesitter/nvim-treesitter' },
 		config = true,
 	},
-	{
-		'yorickpeterse/nvim-tree-pairs',
-		config = true,
-	},
 }
