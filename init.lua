@@ -34,6 +34,10 @@ vim.diagnostic.config({ virtual_lines = true })
 
 vim.cmd('language en_US.utf8')
 
+vim.api.nvim_create_user_command("Format", function ()
+	vim.lsp.buf.format()
+end, { nargs = 0, desc = "LSP Format" })
+
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Set file type to html when ejs file open
