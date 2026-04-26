@@ -856,12 +856,7 @@ require('lazy').setup({
         n_lines = 500,
       }
 
-      -- Add/delete/replace surroundings (brackets, quotes, etc.)
-      --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      require('mini.animate').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -880,6 +875,9 @@ require('lazy').setup({
       --  Check out: https://github.com/nvim-mini/mini.nvim
     end,
   },
+
+  -- Surround
+  "kylechui/nvim-surround",
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
