@@ -874,15 +874,15 @@ require('lazy').setup({
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
-      local statusline = require 'mini.statusline'
-      -- set use_icons to true if you have a Nerd Font
-      statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      -- You can configure sections in the statusline by overriding their
-      -- default behavior. For example, here we set the section for
-      -- cursor location to LINE:COLUMN
-      ---@diagnostic disable-next-line: duplicate-set-field
-      statusline.section_location = function() return '%2l:%-2v' end
+      -- local statusline = require 'mini.statusline'
+      -- -- set use_icons to true if you have a Nerd Font
+      -- statusline.setup { use_icons = vim.g.have_nerd_font }
+      --
+      -- -- You can configure sections in the statusline by overriding their
+      -- -- default behavior. For example, here we set the section for
+      -- -- cursor location to LINE:COLUMN
+      -- ---@diagnostic disable-next-line: duplicate-set-field
+      -- statusline.section_location = function() return '%2l:%-2v' end
 
       -- ... and there is more!
       --  Check out: https://github.com/nvim-mini/mini.nvim
@@ -890,7 +890,41 @@ require('lazy').setup({
   },
 
   -- Surround
-  "kylechui/nvim-surround",
+  'kylechui/nvim-surround',
+
+  -- Statusline
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    opts = {
+      sections = {
+        lualine_a = {
+          {
+            'mode',
+            fmt = function (str)
+              local mode = string.sub(str, 1, 1)
+
+              if mode == 'N' then -- normal mode
+                return '○w○'
+              elseif mode == 'V' then -- visual mode
+                return '●w●'
+              elseif mode == 'I' then -- insert mode
+                return '◠w◠'
+              elseif mode == 'T' then -- terminal mode
+                return '☐w☐'
+              elseif mode == 'R' then -- replace mode
+                return '⚬w⚬'
+              elseif mode == 'C' then -- command mode
+                return '◒w◒'
+              end
+
+              return mode
+            end,
+          },
+        },
+      },
+    },
+  },
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
