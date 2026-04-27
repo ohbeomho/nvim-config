@@ -865,7 +865,11 @@ require('lazy').setup({
         n_lines = 500,
       }
 
-      require('mini.animate').setup()
+      require('mini.animate').setup {
+        cursor = {
+          enable = false,
+        },
+      }
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
