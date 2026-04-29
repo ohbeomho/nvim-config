@@ -865,11 +865,11 @@ require('lazy').setup({
         n_lines = 500,
       }
 
-      require('mini.animate').setup {
+      if not vim.g.neovide then require('mini.animate').setup {
         cursor = {
           enable = false,
         },
-      }
+      } end
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
@@ -901,7 +901,7 @@ require('lazy').setup({
         lualine_a = {
           {
             'mode',
-            fmt = function (str)
+            fmt = function(str)
               local mode = string.sub(str, 1, 1)
 
               if mode == 'N' then -- normal mode
