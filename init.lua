@@ -905,17 +905,17 @@ require('lazy').setup({
               local mode = string.sub(str, 1, 1)
 
               if mode == 'N' then -- normal mode
-                return '○w○'
+                return '○ w○ '
               elseif mode == 'V' then -- visual mode
-                return '●w●'
+                return '● w● '
               elseif mode == 'I' then -- insert mode
-                return '◠w◠'
+                return '◠ w◠ '
               elseif mode == 'T' then -- terminal mode
-                return '☐w☐'
+                return '☐ w☐ '
               elseif mode == 'R' then -- replace mode
-                return '⚬w⚬'
+                return '⚬ w⚬ '
               elseif mode == 'C' then -- command mode
-                return '◒w◒'
+                return '◒ w◒ '
               end
 
               return mode
