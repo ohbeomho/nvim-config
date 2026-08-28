@@ -606,7 +606,6 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        -- clangd = {},
         gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -618,6 +617,8 @@ require('lazy').setup({
         ts_ls = {},
 
         stylua = {}, -- Used to format Lua code
+
+        clangd = {},
 
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
@@ -864,12 +865,6 @@ require('lazy').setup({
         },
         n_lines = 500,
       }
-
-      if not vim.g.neovide then require('mini.animate').setup {
-        cursor = {
-          enable = false,
-        },
-      } end
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
