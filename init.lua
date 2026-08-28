@@ -620,6 +620,12 @@ require('lazy').setup({
 
         clangd = {},
 
+        html = {},
+
+        emmet_language_server = {},
+
+        prettierd = {},
+
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
           on_init = function(client)
@@ -774,7 +780,7 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'enter',
+        preset = 'super-tab',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -896,9 +902,7 @@ require('lazy').setup({
         lualine_a = {
           {
             'mode',
-            fmt = function(str)
-              return string.sub(str, 1, 1)
-            end,
+            fmt = function(str) return string.sub(str, 1, 1) end,
           },
         },
       },
