@@ -271,12 +271,24 @@ require('lazy').setup({
   { 'NMAC427/guess-indent.nvim', opts = {} },
   {
     'supermaven-inc/supermaven-nvim',
-    config = function() require('supermaven-nvim').setup {
-      keymaps = {
-        accept_suggestion = '<A-l>',
-        clear_suggestion = '<A-;>'
+    config = function()
+      require('supermaven-nvim').setup {
+        keymaps = {
+          accept_suggestion = '<A-l>',
+          clear_suggestion = '<A-;>',
+        },
       }
-    } end,
+    end,
+  },
+  {
+    'karb94/neoscroll.nvim',
+    opts = {
+      duration_multiplier = 0.8,
+    },
+  },
+  {
+    'OXY2DEV/markview.nvim',
+    lazy = false,
   },
 
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
@@ -735,11 +747,11 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { "prettierd", "prettier", stop_after_first = true },
-        typescript = { "prettierd", "prettier", stop_after_first = true },
-        html = { "prettierd", "prettier", stop_after_first = true },
-        css = { "prettierd", "prettier", stop_after_first = true },
-        json = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        html = { 'prettierd', 'prettier', stop_after_first = true },
+        css = { 'prettierd', 'prettier', stop_after_first = true },
+        json = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
@@ -844,9 +856,7 @@ require('lazy').setup({
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
-    end,
+    config = function() vim.cmd.colorscheme 'catppuccin-macchiato' end,
   },
 
   -- Highlight todo, notes, etc in comments
