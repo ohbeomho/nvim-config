@@ -270,15 +270,13 @@ require('lazy').setup({
   -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
   { 'NMAC427/guess-indent.nvim', opts = {} },
   {
-    'supermaven-inc/supermaven-nvim',
-    config = function()
-      require('supermaven-nvim').setup {
-        keymaps = {
-          accept_suggestion = '<A-l>',
-          clear_suggestion = '<A-;>',
-        },
-      }
-    end,
+    'zbirenbaum/copilot.lua',
+    dependencies = {
+      'copilotlsp-nvim/copilot-lsp',
+    },
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function() require('copilot').setup {} end,
   },
   {
     'karb94/neoscroll.nvim',
@@ -829,7 +827,10 @@ require('lazy').setup({
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
       },
       cmdline = {
-        completion = { menu = { auto_show = true } },
+        completion = {
+          menu = { auto_show = true },
+          list = { selection = { preselect = false } },
+        },
       },
 
       sources = {
