@@ -283,9 +283,13 @@ require('lazy').setup({
   },
   {
     'karb94/neoscroll.nvim',
-    opts = {
-      duration_multiplier = 0.8,
-    },
+    config = function()
+      if vim.g.neovide then return end
+
+      require('neoscroll').setup {
+        duration_multiplier = 0.8,
+      }
+    end,
   },
   {
     'OXY2DEV/markview.nvim',
