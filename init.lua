@@ -147,6 +147,37 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+-- Code folding
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldmethod = 'expr'
+
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+
+vim.opt.foldtext = ''
+vim.opt.foldcolumn = '1'
+
+-- Persistent code folds
+
+-- Define what gets saved in the view file (only folds and cursor position)
+vim.opt.viewoptions = { 'folds', 'cursor' }
+
+-- Automatically save and restore folds
+local remember_folds = vim.api.nvim_create_augroup('RememberFolds', { clear = true })
+
+vim.api.nvim_create_autocmd('BufWinLeave', {
+  group = remember_folds,
+  pattern = '*.*',
+  command = 'silent! mkview',
+})
+
+vim.api.nvim_create_autocmd('BufWinEnter', {
+  group = remember_folds,
+  pattern = '*.*',
+  command = 'silent! loadview',
+})
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
@@ -295,24 +326,7 @@ require('lazy').setup({
     'OXY2DEV/markview.nvim',
     lazy = false,
   },
-  {
-    'kevinhwang91/nvim-ufo',
-    dependencies = { 'kevinhwang91/promise-async' },
-    config = function()
-      vim.o.foldcolumn = '1'
-      vim.o.foldlevel = 99
-      vim.o.foldlevelstart = 99
-      vim.o.foldenable = true
-      vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldinner: ,foldclose:'
-
-      vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-      vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
-
-      require('ufo').setup {
-        provider_selector = function(bufnr, filetype, buftype) return { 'treesitter', 'indent' } end,
-      }
-    end,
-  },
+  -- lazy.nvim
 
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
